@@ -1341,6 +1341,44 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(max-width:900px){#dashboard .navi-wrap.navi-robot{transform:scale(.80)!important;transform-origin:top center!important}#dashboard .navi-below-kpi .navi-stage{height:224px!important;min-height:224px!important}}
 @media(max-width:650px){#dashboard .navi-wrap.navi-robot{transform:scale(.76)!important}#dashboard .navi-below-kpi .navi-stage{height:216px!important;min-height:216px!important}}
 </style>
+
+<style id="v10-5-duty-assistant">
+/* V10.5 — NAVI trở thành trợ lý nghiệp vụ, bớt phong cách đồ chơi */
+#dashboard .navi-below-kpi{background:linear-gradient(165deg,#edf4f1 0%,#fbf8f0 100%)!important}
+#dashboard .navi-info.navi-speech-bubble{padding:14px 14px 13px!important}
+#dashboard .navi-info .navi-kicker{display:inline-flex!important;align-items:center!important;gap:6px!important;background:#e7f1ed!important;color:#1a6263!important;padding:5px 8px!important;border-radius:999px!important;letter-spacing:.055em!important}
+#dashboard .navi-info .navi-kicker:before{content:"✓";display:grid;place-items:center;width:15px;height:15px;border-radius:50%;background:#1f6868;color:#fff;font-size:9px}
+#dashboard .navi-info h3{font-size:16px!important;margin:8px 0 5px!important}
+#dashboard .navi-info p{min-height:51px!important}
+#dashboard .navi-duty-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+#dashboard .navi-duty-actions .btn{min-height:34px!important;padding:7px 8px!important;font-size:10.5px!important;white-space:nowrap}
+#dashboard .navi-duty-actions .primary-duty{background:#1f6468!important;color:#fff!important;border-color:#1f6468!important}
+/* Concierge / nghiệp vụ: đầu gọn hơn, thân vững hơn, bớt baby */
+#dashboard .navi-wrap.navi-robot{width:205px!important;height:252px!important}
+#dashboard .navi-robot .rb-head{left:39px!important;top:38px!important;width:127px!important;height:96px!important;border-radius:38px 38px 42px 42px!important}
+#dashboard .navi-robot .rb-face{left:11px!important;right:11px!important;top:14px!important;height:66px!important;border-radius:28px!important;background:linear-gradient(145deg,#8dd8d0 0%,#59b8b2 46%,#2b7d7d 100%)!important}
+#dashboard .navi-robot .rb-eye{top:17px!important;width:29px!important;height:30px!important;background:radial-gradient(circle at 36% 30%,#fff 0 18%,#dffbf7 20% 34%,#65cfc5 36% 50%,#155f63 52% 72%,#073b3f 74% 100%)!important}
+#dashboard .navi-robot .rb-eye.left{left:16px!important}#dashboard .navi-robot .rb-eye.right{right:16px!important}
+#dashboard .navi-robot .rb-cheek{opacity:.45!important;width:15px!important;height:6px!important;top:52px!important}
+#dashboard .navi-robot .rb-mouth{top:50px!important;width:19px!important;height:8px!important;border-bottom:2px solid #f7fffc!important}
+#dashboard .navi-robot .rb-hat{left:50px!important;top:10px!important;width:104px!important;height:40px!important;border-radius:24px 24px 8px 8px!important}
+#dashboard .navi-robot .rb-hat-mark{font-size:13px!important}
+#dashboard .navi-robot .rb-body{left:48px!important;top:137px!important;width:109px!important;height:79px!important;border-radius:25px 25px 21px 21px!important}
+#dashboard .navi-robot .rb-body:before{height:27px!important;background:linear-gradient(145deg,#246d6e,#123f43)!important}
+#dashboard .navi-robot .rb-scarf{left:49px!important;top:18px!important;width:12px!important;height:29px!important}
+#dashboard .navi-robot .rb-badge{right:10px!important;top:36px!important;font-size:6.5px!important}
+#dashboard .navi-robot .rb-arm{top:145px!important;height:58px!important;width:28px!important}
+#dashboard .navi-robot .rb-arm.right{right:22px!important}
+#dashboard .navi-robot .rb-arm.left{left:25px!important}
+#dashboard .navi-robot .rb-hand{width:19px!important;height:19px!important}
+#dashboard .navi-robot .rb-clipboard{width:43px!important;height:54px!important;left:-23px!important;border-color:#c79a56!important}
+#dashboard .navi-robot .rb-hip{left:67px!important;top:207px!important;width:71px!important;height:22px!important}
+#dashboard .navi-robot .rb-leg{top:224px!important;height:24px!important;width:25px!important}
+#dashboard .navi-robot .rb-leg.left{left:71px!important}#dashboard .navi-robot .rb-leg.right{left:109px!important}
+#dashboard .navi-robot .rb-foot{width:35px!important;height:14px!important}
+#dashboard .navi-below-kpi .navi-stage{height:246px!important;min-height:246px!important}
+@media(max-width:650px){#dashboard .navi-duty-actions{grid-template-columns:1fr}#dashboard .navi-duty-actions .btn{white-space:normal}#dashboard .navi-below-kpi .navi-stage{height:218px!important;min-height:218px!important}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -1386,9 +1424,9 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 </div>
       <div class="grid g4" id="metrics"><div class="card metric-card"><div class="small">Sinh viên</div><div class="metric">4</div></div><div class="card metric-card"><div class="small">Nhóm nghiệp vụ</div><div class="metric">7</div></div><div class="card metric-card"><div class="small">Lớp đào tạo</div><div class="metric">6</div></div><div class="card metric-card"><div class="small">Môn học</div><div class="metric">6</div></div></div>
       <div class="dashboard-insight-row">
-        <aside class="teacher-navi-panel navi-below-kpi" aria-label="NAVI - Trợ lý quản lý đào tạo">
-          <div class="navi-info navi-speech-bubble"><span class="navi-kicker">NAVI · TRỢ LÝ GIÁO VIÊN</span><h3>Điểm cần chú ý</h3><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p><button class="btn navi-action" onclick="v8Go('reports','Báo cáo')">Xem báo cáo</button></div>
-          <div class="navi-stage"><div class="navi-wrap navi-robot" id="naviMascot" aria-label="NAVI - robot trợ lý giáo viên ngành dịch vụ"><div class="rb-shadow"></div><div class="rb-hat"><span class="rb-hat-band"></span><span class="rb-hat-mark">✦</span></div><div class="rb-head"><div class="rb-face"><div class="rb-eye left"><i></i></div><div class="rb-eye right"><i></i></div><div class="rb-cheek left"></div><div class="rb-cheek right"></div><div class="rb-mouth"></div></div><div class="rb-ear left"></div><div class="rb-ear right"></div></div><div class="rb-neck"></div><div class="rb-body"><div class="rb-collar left"></div><div class="rb-collar right"></div><div class="rb-scarf"></div><div class="rb-badge">NAVI</div><div class="rb-status"><i></i><i></i><i></i></div></div><div class="rb-arm left"><div class="rb-hand"></div><div class="rb-clipboard"><span class="clip-logo">✦</span><span class="clip-line l1"></span><span class="clip-line l2"></span><span class="clip-line l3"></span></div></div><div class="rb-arm right"><div class="rb-hand"></div></div><div class="rb-hip"></div><div class="rb-leg left"><div class="rb-foot"></div></div><div class="rb-leg right"><div class="rb-foot"></div></div></div></div>
+        <aside class="teacher-navi-panel navi-below-kpi" aria-label="NAVI - Trợ lý nghiệp vụ đào tạo nghề">
+          <div class="navi-info navi-speech-bubble"><span class="navi-kicker">NAVI · TRỢ LÝ NGHIỆP VỤ</span><h3>Ưu tiên nghiệp vụ</h3><p id="naviInsight">Đang rà tiến độ, kỹ năng và kết quả cần giáo viên xử lý…</p><div class="navi-duty-actions"><button class="btn navi-action primary-duty" onclick="v8Go('skills','Hồ sơ kỹ năng')">Đánh giá kỹ năng</button><button class="btn navi-action" onclick="v8Go('progress','Tiến độ đào tạo')">Xem tiến độ</button></div></div>
+          <div class="navi-stage"><div class="navi-wrap navi-robot" id="naviMascot" aria-label="NAVI - robot trợ lý nghiệp vụ ngành Du lịch Nhà hàng Khách sạn"><div class="rb-shadow"></div><div class="rb-hat"><span class="rb-hat-band"></span><span class="rb-hat-mark">✦</span></div><div class="rb-head"><div class="rb-face"><div class="rb-eye left"><i></i></div><div class="rb-eye right"><i></i></div><div class="rb-cheek left"></div><div class="rb-cheek right"></div><div class="rb-mouth"></div></div><div class="rb-ear left"></div><div class="rb-ear right"></div></div><div class="rb-neck"></div><div class="rb-body"><div class="rb-collar left"></div><div class="rb-collar right"></div><div class="rb-scarf"></div><div class="rb-badge">NAVI</div><div class="rb-status"><i></i><i></i><i></i></div></div><div class="rb-arm left"><div class="rb-hand"></div><div class="rb-clipboard"><span class="clip-logo">✦</span><span class="clip-line l1"></span><span class="clip-line l2"></span><span class="clip-line l3"></span></div></div><div class="rb-arm right"><div class="rb-hand"></div></div><div class="rb-hip"></div><div class="rb-leg left"><div class="rb-foot"></div></div><div class="rb-leg right"><div class="rb-foot"></div></div></div></div>
         </aside>
         <div class="card"><h3>Tiến độ theo nghiệp vụ</h3><div id="deptProgress"><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Kỹ năng chung</b><span>32%</span></div><div class="progress"><span style="width:32%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Buồng</b><span>24%</span></div><div class="progress"><span style="width:24%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bàn</b><span>18%</span></div><div class="progress"><span style="width:18%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bar</b><span>12%</span></div><div class="progress"><span style="width:12%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bếp</b><span>10%</span></div><div class="progress"><span style="width:10%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Lễ tân</b><span>19%</span></div><div class="progress"><span style="width:19%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Du lịch</b><span>22%</span></div><div class="progress"><span style="width:22%"></span></div></div></div></div>
         <div class="card"><h3>Kỹ năng cần ưu tiên</h3><div id="prioritySkills"><div class="notice" style="margin:8px 0">Nguyễn Minh Anh: Cần luyện thêm thao tác nghiệp vụ buồng</div><div class="notice" style="margin:8px 0">Trần Quốc Bảo: Tiếp tục luyện kỹ năng phục vụ</div></div></div>
@@ -3205,7 +3243,7 @@ function v8SetSlide(i){const slides=[...document.querySelectorAll('.v8-slide')],
 function v8Slide(step){v8SetSlide(v8SlideIndex+step)}
 function v8RestartSlider(){clearInterval(v8SlideTimer);v8SlideTimer=setInterval(()=>v8SetSlide(v8SlideIndex+1),6500)}
 function v8Go(id,title){if(typeof showSection==='function')showSection(id,title)}
-function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0,ach=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++;if(r&&r.level>=2)ach++}))}catch(e){};let msg;if(!n)msg='Thầy/cô hãy thêm sinh viên để NAVI bắt đầu tổng hợp tình hình lớp.';else if(v8SlideIndex===1)msg=weak?'Có '+weak+' kỹ năng đang ở mức “Đang luyện tập”. Nên ưu tiên kiểm tra trong buổi thực hành tiếp theo.':'Hiện chưa có kỹ năng nào được đánh dấu “Đang luyện tập”.';else if(v8SlideIndex===2)msg='Đang theo dõi '+n+' sinh viên và ghi nhận '+ach+' lượt kỹ năng đã đạt để phục vụ báo cáo, Skill Passport.';else msg='Đang theo dõi '+n+' sinh viên. '+(weak?'Có '+weak+' kỹ năng cần giáo viên ưu tiên theo dõi.':'Tiến độ hiện chưa có cảnh báo kỹ năng mức “Đang luyện tập”.');el.textContent=msg}
+function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0,ach=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++;if(r&&r.level>=2)ach++}))}catch(e){};let msg;if(!n)msg='Thầy/cô hãy thêm sinh viên để NAVI bắt đầu rà soát nghiệp vụ và tiến độ đào tạo.';else if(v8SlideIndex===1)msg=weak?'Có '+weak+' kỹ năng đang ở mức “Đang luyện tập”. NAVI đề xuất ưu tiên đánh giá lại trong buổi thực hành tiếp theo.':'Hiện chưa có kỹ năng mức “Đang luyện tập”. NAVI chưa phát hiện nghiệp vụ cần ưu tiên.';else if(v8SlideIndex===2)msg='Đã rà '+n+' sinh viên và '+ach+' lượt kỹ năng đạt. Có thể tiếp tục đối chiếu hồ sơ năng lực và Skill Passport.';else msg='Đã rà '+n+' sinh viên. '+(weak?'Có '+weak+' kỹ năng cần ưu tiên xử lý nghiệp vụ.':'Chưa phát hiện cảnh báo nghiệp vụ ở mức “Đang luyện tập”.');el.textContent=msg}
 document.addEventListener('DOMContentLoaded',()=>{v8RestartSlider();setTimeout(v8NaviInsight,250);const h=document.getElementById('v8Hero');if(h){h.addEventListener('mouseenter',()=>clearInterval(v8SlideTimer));h.addEventListener('mouseleave',v8RestartSlider)}setTimeout(v88AnimateDashboardCounters,250);});
 const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboard==='function'){window.renderDashboard=function(){const r=_v8OldRenderDashboard.apply(this,arguments);setTimeout(v8NaviInsight,20);setTimeout(v88AnimateDashboardCounters,30);return r};setTimeout(v88AnimateDashboardCounters,120)}
 </script>
