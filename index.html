@@ -1379,6 +1379,53 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 #dashboard .navi-below-kpi .navi-stage{height:246px!important;min-height:246px!important}
 @media(max-width:650px){#dashboard .navi-duty-actions{grid-template-columns:1fr}#dashboard .navi-duty-actions .btn{white-space:normal}#dashboard .navi-below-kpi .navi-stage{height:218px!important;min-height:218px!important}}
 </style>
+
+<style id="v10-6-sidebar-refine">
+/* V10.6 — lighter professional sidebar + invisible scrollbar */
+.sidebar{
+  background:linear-gradient(180deg,#286B6D 0%,#215E61 48%,#1B5356 100%)!important;
+  color:#FFFDF9!important;
+  padding:14px 11px!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+  border-right:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:7px 0 24px rgba(20,67,69,.08)!important;
+}
+.sidebar::-webkit-scrollbar{width:0!important;height:0!important;display:none!important}
+.sidebar .brand{padding:4px 8px 11px!important;margin-bottom:6px!important;border-bottom:1px solid rgba(255,255,255,.16)!important}
+.sidebar .brand h1,.sidebar #appName{font-size:17px!important;line-height:1.16!important;color:#FFFDF9!important}
+.sidebar .brand h1:before{color:#F2D49A!important}
+.sidebar .brand p{font-size:10.8px!important;line-height:1.35!important;color:#E1EEEB!important;margin-top:5px!important}
+.sidebar .brand-levels{font-size:10px!important;color:#F4DCA8!important;letter-spacing:.065em!important;margin-top:7px!important}
+.sidebar .brand-edit-btn{min-height:34px!important;padding:7px 9px!important;margin-top:8px!important;background:rgba(255,255,255,.08)!important;border-color:rgba(255,239,205,.48)!important;color:#FFF9EC!important}
+.sidebar .nav{gap:2px!important;padding-top:2px!important}
+.sidebar .nav button{
+  min-height:36px!important;
+  padding:8px 9px 8px 34px!important;
+  border-radius:9px!important;
+  color:#F4FAF8!important;
+  font-size:13px!important;
+  line-height:1.15!important;
+  font-weight:700!important;
+}
+.sidebar .nav button:before{left:12px!important}
+.sidebar .nav button:hover{background:rgba(255,255,255,.11)!important;color:#fff!important}
+.sidebar .nav button.active{background:#FFF8EB!important;color:#184D50!important;box-shadow:inset 4px 0 #D1A85F,0 5px 13px rgba(11,54,56,.12)!important}
+.sidebar .nav button.active:before{background:#286B6D!important}
+@media(max-height:760px) and (min-width:761px){
+  .sidebar{padding-top:10px!important;padding-bottom:10px!important}
+  .sidebar .brand{padding-bottom:8px!important}
+  .sidebar .brand p{display:none!important}
+  .sidebar .brand-edit-btn{min-height:31px!important;margin-top:6px!important}
+  .sidebar .nav button{min-height:33px!important;padding-top:7px!important;padding-bottom:7px!important}
+}
+@media(max-width:760px){
+  .sidebar{overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;background:linear-gradient(135deg,#286B6D,#1B5356)!important}
+  .sidebar::-webkit-scrollbar{display:none!important}
+}
+</style>
 </head>
 <body>
 <div class="app">
