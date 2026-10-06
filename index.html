@@ -850,7 +850,9 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
-\n<style id="v8-7-motion-system">\n/* V8.7 Motion System — purposeful micro-interactions, no distracting motion */\n:root{--motion-fast:180ms;--motion-base:320ms;--motion-slow:560ms;--motion-ease:cubic-bezier(.2,.8,.2,1)}\n.section.active{animation:v87PageIn .42s var(--motion-ease) both}\n.section.active>.card,.section.active>.grid>.card{animation:v87CardIn .48s var(--motion-ease) both}\n.section.active>.card:nth-child(2),.section.active>.grid>.card:nth-child(2){animation-delay:.05s}\n.section.active>.card:nth-child(3),.section.active>.grid>.card:nth-child(3){animation-delay:.1s}\n@keyframes v87PageIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}\n@keyframes v87CardIn{from{opacity:0;transform:translateY(12px) scale(.992)}to{opacity:1;transform:none}}\n.sidebar .nav button{transition:background var(--motion-fast) ease,color var(--motion-fast) ease,transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}\n.sidebar .nav button:hover{transform:translateX(3px)}\n.sidebar .nav button.active{animation:v87NavActive .32s var(--motion-ease)}\n@keyframes v87NavActive{0%{transform:translateX(-3px);opacity:.75}100%{transform:none;opacity:1}}\n.card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease,border-color var(--motion-base) ease!important}\n.section:not(#dashboard) .card:hover{box-shadow:var(--ui-shadow-hover)!important;border-color:#D1DCD6!important}\n.metric-card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}\n.metric-card:hover{transform:translateY(-4px)!important;box-shadow:var(--ui-shadow-hover)!important}\n.metric-card .metric{animation:v87Metric .55s var(--motion-ease) both}\n@keyframes v87Metric{from{opacity:0;transform:translateY(7px) scale(.96)}to{opacity:1;transform:none}}\n.btn,.hero-btn,.brand-edit-btn{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease,filter var(--motion-fast) ease,background var(--motion-fast) ease!important}\n.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:translateY(-2px)!important}\n.btn:active,.hero-btn:active,.brand-edit-btn:active{transform:translateY(0) scale(.98)!important}\ninput,select,textarea{transition:border-color var(--motion-fast) ease,box-shadow var(--motion-fast) ease,background var(--motion-fast) ease!important}\ntbody tr td{transition:background var(--motion-fast) ease!important}\ntbody tr:hover td{background:#F7FAF8!important}\n.badge,.career-chip{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}.badge:hover,.career-chip:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(20,61,64,.08)}\n.progress span{position:relative;overflow:hidden;transition:width .75s var(--motion-ease)!important}\n.progress span:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:v87ProgressGlow 3.2s ease-in-out infinite}\n@keyframes v87ProgressGlow{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}\n.notice{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.notice:hover{transform:translateX(3px);box-shadow:0 7px 16px rgba(20,61,64,.06)}\n.v8-hero{overflow:hidden}.v8-copy>*{animation:v87HeroText .62s var(--motion-ease) both}.v8-copy>*:nth-child(2){animation-delay:.08s}.v8-copy>*:nth-child(3){animation-delay:.14s}.v8-copy>*:nth-child(4){animation-delay:.2s}\n@keyframes v87HeroText{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}\n.v8-dot{transition:width .25s ease,transform .25s ease,background .25s ease!important}.v8-dot.active{transform:scale(1.18)}\n.v8-arrow{transition:transform var(--motion-fast) ease,background var(--motion-fast) ease!important}.v8-arrow:hover{transform:scale(1.08)}\n.navi-assist{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.navi-assist:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(20,61,64,.08)!important}\n@media(max-width:760px){.sidebar .nav button:hover{transform:none}.section:not(#dashboard) .card:hover,.metric-card:hover,.notice:hover,.navi-assist:hover{transform:none!important}}\n@media(prefers-reduced-motion:reduce){.section.active,.section.active>.card,.section.active>.grid>.card,.sidebar .nav button.active,.metric-card .metric,.v8-copy>*,.progress span:after{animation:none!important}.sidebar .nav button:hover,.metric-card:hover,.notice:hover,.navi-assist:hover,.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:none!important}}\n</style>\n
+
+<style id="v8-7-motion-system">\n/* V8.7 Motion System — purposeful micro-interactions, no distracting motion */\n:root{--motion-fast:180ms;--motion-base:320ms;--motion-slow:560ms;--motion-ease:cubic-bezier(.2,.8,.2,1)}\n.section.active{animation:v87PageIn .42s var(--motion-ease) both}\n.section.active>.card,.section.active>.grid>.card{animation:v87CardIn .48s var(--motion-ease) both}\n.section.active>.card:nth-child(2),.section.active>.grid>.card:nth-child(2){animation-delay:.05s}\n.section.active>.card:nth-child(3),.section.active>.grid>.card:nth-child(3){animation-delay:.1s}\n@keyframes v87PageIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}\n@keyframes v87CardIn{from{opacity:0;transform:translateY(12px) scale(.992)}to{opacity:1;transform:none}}\n.sidebar .nav button{transition:background var(--motion-fast) ease,color var(--motion-fast) ease,transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}\n.sidebar .nav button:hover{transform:translateX(3px)}\n.sidebar .nav button.active{animation:v87NavActive .32s var(--motion-ease)}\n@keyframes v87NavActive{0%{transform:translateX(-3px);opacity:.75}100%{transform:none;opacity:1}}\n.card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease,border-color var(--motion-base) ease!important}\n.section:not(#dashboard) .card:hover{box-shadow:var(--ui-shadow-hover)!important;border-color:#D1DCD6!important}\n.metric-card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}\n.metric-card:hover{transform:translateY(-4px)!important;box-shadow:var(--ui-shadow-hover)!important}\n.metric-card .metric{animation:v87Metric .55s var(--motion-ease) both}\n@keyframes v87Metric{from{opacity:0;transform:translateY(7px) scale(.96)}to{opacity:1;transform:none}}\n.btn,.hero-btn,.brand-edit-btn{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease,filter var(--motion-fast) ease,background var(--motion-fast) ease!important}\n.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:translateY(-2px)!important}\n.btn:active,.hero-btn:active,.brand-edit-btn:active{transform:translateY(0) scale(.98)!important}\ninput,select,textarea{transition:border-color var(--motion-fast) ease,box-shadow var(--motion-fast) ease,background var(--motion-fast) ease!important}\ntbody tr td{transition:background var(--motion-fast) ease!important}\ntbody tr:hover td{background:#F7FAF8!important}\n.badge,.career-chip{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}.badge:hover,.career-chip:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(20,61,64,.08)}\n.progress span{position:relative;overflow:hidden;transition:width .75s var(--motion-ease)!important}\n.progress span:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:v87ProgressGlow 3.2s ease-in-out infinite}\n@keyframes v87ProgressGlow{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}\n.notice{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.notice:hover{transform:translateX(3px);box-shadow:0 7px 16px rgba(20,61,64,.06)}\n.v8-hero{overflow:hidden}.v8-copy>*{animation:v87HeroText .62s var(--motion-ease) both}.v8-copy>*:nth-child(2){animation-delay:.08s}.v8-copy>*:nth-child(3){animation-delay:.14s}.v8-copy>*:nth-child(4){animation-delay:.2s}\n@keyframes v87HeroText{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}\n.v8-dot{transition:width .25s ease,transform .25s ease,background .25s ease!important}.v8-dot.active{transform:scale(1.18)}\n.v8-arrow{transition:transform var(--motion-fast) ease,background var(--motion-fast) ease!important}.v8-arrow:hover{transform:scale(1.08)}\n.navi-assist{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.navi-assist:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(20,61,64,.08)!important}\n@media(max-width:760px){.sidebar .nav button:hover{transform:none}.section:not(#dashboard) .card:hover,.metric-card:hover,.notice:hover,.navi-assist:hover{transform:none!important}}\n@media(prefers-reduced-motion:reduce){.section.active,.section.active>.card,.section.active>.grid>.card,.sidebar .nav button.active,.metric-card .metric,.v8-copy>*,.progress span:after{animation:none!important}.sidebar .nav button:hover,.metric-card:hover,.notice:hover,.navi-assist:hover,.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:none!important}}\n</style>
+
 <style id="v8-8-slide-counter-fix">
 /* V8.8: repair hero composition + animated dashboard counters */
 #dashboard .v8-slide{grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr)!important;column-gap:28px!important}
@@ -1266,7 +1268,9 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(max-width:650px){#dashboard .navi-wrap.navi-robot{transform:scale(.78)}#dashboard .navi-below-kpi .navi-stage{height:210px!important;min-height:210px!important}}
 @media(prefers-reduced-motion:reduce){#dashboard .navi-wrap.navi-robot,#dashboard .navi-robot .rb-eye,#dashboard .navi-robot .rb-arm.right,#dashboard .navi-robot .rb-shadow{animation:none!important}}
 </style>
-\n<style id="v10-3-cute-robot-face">\n/* V10.3 — làm NAVI sáng mặt, cute hơn; giữ nguyên robot hospitality và logic */\n#dashboard .navi-wrap.navi-robot{width:194px!important;height:242px!important;filter:drop-shadow(0 16px 16px rgba(20,61,61,.14))!important}\n#dashboard .navi-robot .rb-head{left:38px!important;top:34px!important;width:118px!important;height:92px!important;border-radius:40px 40px 44px 44px!important;background:linear-gradient(145deg,#fffefa 0%,#f5faf7 46%,#dce9e5 100%)!important;box-shadow:inset 9px 7px 14px #fff,inset -9px -8px 13px rgba(41,91,88,.10),0 10px 20px rgba(20,69,68,.13)!important}\n#dashboard .navi-robot .rb-face{left:10px!important;right:10px!important;top:13px!important;height:64px!important;border-radius:29px!important;background:radial-gradient(circle at 50% 42%,#d9fbf5 0 10%,#aee8df 34%,#74c8bf 62%,#3e918f 100%)!important;box-shadow:inset 0 0 0 2px rgba(255,255,255,.72),inset 0 8px 15px rgba(255,255,255,.30),inset 0 -8px 14px rgba(23,91,91,.13),0 0 12px rgba(87,201,191,.18)!important;overflow:hidden!important}\n#dashboard .navi-robot .rb-face:before{content:"";position:absolute;left:12px;right:12px;top:5px;height:17px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0));pointer-events:none}\n#dashboard .navi-robot .rb-eye{top:14px!important;width:29px!important;height:31px!important;background:radial-gradient(circle at 36% 30%,#fff 0 16%,#dffffa 18% 27%,#65cfc5 29% 45%,#177f80 47% 64%,#073f43 66% 100%)!important;border:2px solid rgba(255,255,255,.86)!important;box-shadow:0 2px 4px rgba(13,72,72,.12),0 0 9px rgba(255,255,255,.45)!important}\n#dashboard .navi-robot .rb-eye.left{left:12px!important}#dashboard .navi-robot .rb-eye.right{right:12px!important}\n#dashboard .navi-robot .rb-eye i{left:9px!important;top:10px!important;width:9px!important;height:10px!important;background:#07383b!important;box-shadow:-4px -4px 0 -1px #fff,3px 3px 0 -3px rgba(255,255,255,.95)!important}\n#dashboard .navi-robot .rb-cheek{top:47px!important;width:17px!important;height:7px!important;background:radial-gradient(ellipse,rgba(246,142,142,.55),rgba(246,142,142,.10) 70%,transparent)!important;filter:none!important}\n#dashboard .navi-robot .rb-cheek.left{left:10px!important}#dashboard .navi-robot .rb-cheek.right{right:10px!important}\n#dashboard .navi-robot .rb-mouth{top:45px!important;width:20px!important;height:11px!important;border-bottom:3px solid #fff7ef!important;border-radius:0 0 18px 18px!important;filter:drop-shadow(0 1px 1px rgba(17,101,99,.18))!important}\n#dashboard .navi-robot .rb-mouth:after{content:"";position:absolute;left:6px;bottom:-2px;width:8px;height:3px;border-radius:50%;background:#f5a7a1;opacity:.72}\n#dashboard .navi-robot .rb-ear{top:31px!important;width:14px!important;height:29px!important;border-radius:9px!important}\n#dashboard .navi-robot .rb-ear.left{left:-8px!important}#dashboard .navi-robot .rb-ear.right{right:-8px!important}\n#dashboard .navi-robot .rb-ear:after{inset:7px 4px!important;background:#64cfc5!important;box-shadow:0 0 6px rgba(87,201,191,.35)!important}\n#dashboard .navi-robot .rb-hat{left:51px!important;top:9px!important;width:92px!important;height:38px!important}\n#dashboard .navi-robot .rb-neck{left:81px!important;top:121px!important}\n#dashboard .navi-robot .rb-body{top:131px!important}\n#dashboard .navi-robot .rb-arm{top:140px!important}\n#dashboard .navi-robot .rb-hip{top:197px!important}\n#dashboard .navi-robot .rb-leg{top:212px!important}\n#dashboard .navi-robot .rb-shadow{bottom:-3px!important}\n#dashboard .navi-below-kpi .navi-stage{height:234px!important;min-height:234px!important}\n#dashboard .navi-info.navi-speech-bubble{min-height:132px!important}\n@media(max-width:900px){#dashboard .navi-wrap.navi-robot{transform:scale(.80)!important}#dashboard .navi-below-kpi .navi-stage{height:222px!important;min-height:222px!important}}\n@media(max-width:650px){#dashboard .navi-wrap.navi-robot{transform:scale(.76)!important}#dashboard .navi-below-kpi .navi-stage{height:214px!important;min-height:214px!important}}\n</style>\n
+
+<style id="v10-3-cute-robot-face">\n/* V10.3 — làm NAVI sáng mặt, cute hơn; giữ nguyên robot hospitality và logic */\n#dashboard .navi-wrap.navi-robot{width:194px!important;height:242px!important;filter:drop-shadow(0 16px 16px rgba(20,61,61,.14))!important}\n#dashboard .navi-robot .rb-head{left:38px!important;top:34px!important;width:118px!important;height:92px!important;border-radius:40px 40px 44px 44px!important;background:linear-gradient(145deg,#fffefa 0%,#f5faf7 46%,#dce9e5 100%)!important;box-shadow:inset 9px 7px 14px #fff,inset -9px -8px 13px rgba(41,91,88,.10),0 10px 20px rgba(20,69,68,.13)!important}\n#dashboard .navi-robot .rb-face{left:10px!important;right:10px!important;top:13px!important;height:64px!important;border-radius:29px!important;background:radial-gradient(circle at 50% 42%,#d9fbf5 0 10%,#aee8df 34%,#74c8bf 62%,#3e918f 100%)!important;box-shadow:inset 0 0 0 2px rgba(255,255,255,.72),inset 0 8px 15px rgba(255,255,255,.30),inset 0 -8px 14px rgba(23,91,91,.13),0 0 12px rgba(87,201,191,.18)!important;overflow:hidden!important}\n#dashboard .navi-robot .rb-face:before{content:"";position:absolute;left:12px;right:12px;top:5px;height:17px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0));pointer-events:none}\n#dashboard .navi-robot .rb-eye{top:14px!important;width:29px!important;height:31px!important;background:radial-gradient(circle at 36% 30%,#fff 0 16%,#dffffa 18% 27%,#65cfc5 29% 45%,#177f80 47% 64%,#073f43 66% 100%)!important;border:2px solid rgba(255,255,255,.86)!important;box-shadow:0 2px 4px rgba(13,72,72,.12),0 0 9px rgba(255,255,255,.45)!important}\n#dashboard .navi-robot .rb-eye.left{left:12px!important}#dashboard .navi-robot .rb-eye.right{right:12px!important}\n#dashboard .navi-robot .rb-eye i{left:9px!important;top:10px!important;width:9px!important;height:10px!important;background:#07383b!important;box-shadow:-4px -4px 0 -1px #fff,3px 3px 0 -3px rgba(255,255,255,.95)!important}\n#dashboard .navi-robot .rb-cheek{top:47px!important;width:17px!important;height:7px!important;background:radial-gradient(ellipse,rgba(246,142,142,.55),rgba(246,142,142,.10) 70%,transparent)!important;filter:none!important}\n#dashboard .navi-robot .rb-cheek.left{left:10px!important}#dashboard .navi-robot .rb-cheek.right{right:10px!important}\n#dashboard .navi-robot .rb-mouth{top:45px!important;width:20px!important;height:11px!important;border-bottom:3px solid #fff7ef!important;border-radius:0 0 18px 18px!important;filter:drop-shadow(0 1px 1px rgba(17,101,99,.18))!important}\n#dashboard .navi-robot .rb-mouth:after{content:"";position:absolute;left:6px;bottom:-2px;width:8px;height:3px;border-radius:50%;background:#f5a7a1;opacity:.72}\n#dashboard .navi-robot .rb-ear{top:31px!important;width:14px!important;height:29px!important;border-radius:9px!important}\n#dashboard .navi-robot .rb-ear.left{left:-8px!important}#dashboard .navi-robot .rb-ear.right{right:-8px!important}\n#dashboard .navi-robot .rb-ear:after{inset:7px 4px!important;background:#64cfc5!important;box-shadow:0 0 6px rgba(87,201,191,.35)!important}\n#dashboard .navi-robot .rb-hat{left:51px!important;top:9px!important;width:92px!important;height:38px!important}\n#dashboard .navi-robot .rb-neck{left:81px!important;top:121px!important}\n#dashboard .navi-robot .rb-body{top:131px!important}\n#dashboard .navi-robot .rb-arm{top:140px!important}\n#dashboard .navi-robot .rb-hip{top:197px!important}\n#dashboard .navi-robot .rb-leg{top:212px!important}\n#dashboard .navi-robot .rb-shadow{bottom:-3px!important}\n#dashboard .navi-below-kpi .navi-stage{height:234px!important;min-height:234px!important}\n#dashboard .navi-info.navi-speech-bubble{min-height:132px!important}\n@media(max-width:900px){#dashboard .navi-wrap.navi-robot{transform:scale(.80)!important}#dashboard .navi-below-kpi .navi-stage{height:222px!important;min-height:222px!important}}\n@media(max-width:650px){#dashboard .navi-wrap.navi-robot{transform:scale(.76)!important}#dashboard .navi-below-kpi .navi-stage{height:214px!important;min-height:214px!important}}\n</style>
+
 <style id="v10-4-robot-redesign">
 /* V10.4 — REDESIGN thật sự: đổi tỷ lệ + cấu trúc thị giác, không chỉ đổi màu */
 #dashboard .navi-wrap.navi-robot{
@@ -1424,6 +1428,69 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(max-width:760px){
   .sidebar{overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;background:linear-gradient(135deg,#286B6D,#1B5356)!important}
   .sidebar::-webkit-scrollbar{display:none!important}
+}
+</style>
+
+<style id="v10-7-brand-title-fix">
+/* V10.7 — Brand title: intentional two-line lock, no accidental word drop */
+.sidebar .brand #appName{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  font-size:16.5px!important;
+  line-height:1.08!important;
+  font-weight:900!important;
+  letter-spacing:.015em!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  word-break:keep-all!important;
+}
+.sidebar .brand #appName span{display:block!important;white-space:nowrap!important;max-width:100%!important}
+.sidebar .brand #appName:before{position:absolute!important;transform:translateX(-1px);margin-left:-1px!important}
+.sidebar .brand{position:relative!important}
+.sidebar .brand #appName span:first-child{padding-left:0!important}
+.sidebar .brand #appName + p{margin-top:7px!important}
+@media(max-width:760px){
+ .sidebar .brand #appName{font-size:16px!important;line-height:1.08!important}
+}
+</style>
+
+<style id="v10-9-brand-one-line">
+/* V10.9 — Keep the default app brand on one intentional line */
+.sidebar .brand #appName{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  color:#FFFDF9!important;
+  font-size:14.2px!important;
+  line-height:1.2!important;
+  font-weight:900!important;
+  letter-spacing:.005em!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+}
+.sidebar .brand #appName:before{
+  content:'✦'!important;
+  position:static!important;
+  display:inline-block!important;
+  margin:0 7px 0 0!important;
+  transform:none!important;
+  color:#F2D49A!important;
+  font-size:12px!important;
+  vertical-align:1px!important;
+}
+.sidebar .brand #appName span{display:inline!important;white-space:inherit!important}
+.sidebar .brand #appName + p{margin-top:7px!important}
+@media(max-width:760px){
+  .sidebar .brand #appName{font-size:14px!important}
 }
 </style>
 </head>
@@ -1997,7 +2064,20 @@ function applicableDepts(sid){const st=data.students.find(x=>x.id===sid);return 
 function pctStudent(sid){const arr=applicableSkills(sid),r=arr.map(s=>data.ratings[sid+'|'+s.code]?.level||0);return r.length?Math.round(r.reduce((a,b)=>a+b,0)/(r.length*3)*100):0}
 function achieved(sid){return applicableSkills(sid).filter(s=>(data.ratings[sid+'|'+s.code]?.level||0)>=2).length}
 function deptPct(sid,dept){const arr=applicableSkills(sid).filter(s=>s.dept===dept);if(!arr.length)return 0;return Math.round(arr.reduce((a,s)=>a+(data.ratings[sid+'|'+s.code]?.level||0),0)/(arr.length*3)*100)}
-function renderAll(){document.getElementById('appName').textContent=data.settings.name;document.title=data.settings.name;populateSelects();renderDashboard();renderStudents();renderProgressEditor();renderSkillEditor();renderPassport();renderLibrary();document.getElementById('setName').value=data.settings.name;document.getElementById('setSchool').value=data.settings.school}
+function renderAll(){setBrandAppName(data.settings.name);document.title=data.settings.name;populateSelects();renderDashboard();renderStudents();renderProgressEditor();renderSkillEditor();renderPassport();renderLibrary();document.getElementById('setName').value=data.settings.name;document.getElementById('setSchool').value=data.settings.school}
+function setBrandAppName(name){
+  const el=document.getElementById('appName');
+  if(!el)return;
+  const value=(name||'').trim();
+  if(value.toLocaleUpperCase('vi-VN')==='HỒ SƠ NĂNG LỰC NGHỀ'){
+    el.replaceChildren();
+    const l1=document.createElement('span'); l1.textContent='HỒ SƠ NĂNG LỰC';
+    const l2=document.createElement('span'); l2.textContent='NGHỀ';
+    el.append(l1,l2);
+  }else{
+    el.textContent=value;
+  }
+}
 function populateSelects(){document.getElementById('stCareer').innerHTML=CAREER_NAMES.map(c=>`<option>${c}</option>`).join('');['prStudent','skStudent','ppStudent','rpStudent'].forEach(id=>{const el=document.getElementById(id);const cur=el.value;el.innerHTML=data.students.map(s=>`<option value="${s.id}">${s.name} · ${s.className}</option>`).join('');if(data.students.some(s=>s.id===cur))el.value=cur});['skDept','libDept'].forEach(id=>{const el=document.getElementById(id);const cur=el.value;el.innerHTML=(id==='libDept'?['Tất cả',...DEPTS]:DEPTS).map(d=>`<option>${d}</option>`).join('');if([...el.options].some(o=>o.value===cur))el.value=cur})}
 function renderDashboard(){document.getElementById('metrics').innerHTML=[['Sinh viên',data.students.length],['Kỹ năng',skillSeed.length],['Đã đạt',data.students.reduce((a,s)=>a+achieved(s.id),0)],['Tiến độ TB',data.students.length?Math.round(data.students.reduce((a,s)=>a+pctStudent(s.id),0)/data.students.length)+'%':'0%']].map(m=>`<div class="card metric-card"><div class="small">${m[0]}</div><div class="metric">${m[1]}</div></div>`).join('');document.getElementById('deptProgress').innerHTML=DEPTS.map(d=>{let p=data.students.length?Math.round(data.students.reduce((a,s)=>a+deptPct(s.id,d),0)/data.students.length):0;return `<div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>${d}</b><span>${p}%</span></div><div class="progress"><span style="width:${p}%"></span></div></div>`}).join('');let weak=[];data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{let r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak.push(`${st.name}: ${sk.name}`)}));document.getElementById('prioritySkills').innerHTML=weak.length?weak.slice(0,8).map(x=>`<div class="notice" style="margin:8px 0">${x}</div>`).join(''):'<p class="muted">Chưa có kỹ năng nào được đánh dấu “Đang luyện tập”.</p>'}
 let editingStudentId=null;
@@ -2389,7 +2469,7 @@ function populateSelects(){
 
 function renderAll(){
   ensureClassData();
-  document.getElementById('appName').textContent=data.settings.name;
+  setBrandAppName(data.settings.name);
   document.title=data.settings.name;
   populateSelects();
   renderClasses();
@@ -2702,7 +2782,7 @@ function populateSelects(){
 function renderAll(){
   ensureClassData();
   if(!Array.isArray(data.customSkills))data.customSkills=[];
-  document.getElementById('appName').textContent=data.settings.name;
+  setBrandAppName(data.settings.name);
   document.title=data.settings.name;
   populateSelects();
   renderClasses();
@@ -2987,7 +3067,7 @@ function populateSelects(){
 function renderAll(){
   ensureClassData();ensureSubjectData();
   if(!Array.isArray(data.customSkills))data.customSkills=[];
-  document.getElementById('appName').textContent=data.settings.name;
+  setBrandAppName(data.settings.name);
   document.title=data.settings.name;
   populateSelects();
   renderClasses();renderSubjects();renderDashboard();renderStudents();
@@ -3019,7 +3099,7 @@ function updateAppName(){
   if(name.length>60)return alert('Tên ứng dụng nên ngắn hơn 60 ký tự.');
   data.settings.name=name;
   localStorage.setItem('hosoNgheProV2',JSON.stringify(data));
-  document.getElementById('appName').textContent=name;
+  setBrandAppName(name);
   document.title=name;
   const preview=document.getElementById('currentAppNamePreview');
   if(preview)preview.textContent=name;
@@ -3032,7 +3112,7 @@ function resetAppName(){
   if(input)input.value=name;
   data.settings.name=name;
   localStorage.setItem('hosoNgheProV2',JSON.stringify(data));
-  document.getElementById('appName').textContent=name;
+  setBrandAppName(name);
   document.title=name;
   const preview=document.getElementById('currentAppNamePreview');
   if(preview)preview.textContent=name;
@@ -3098,7 +3178,7 @@ function renderAll(){
   ensureDepartments();
   ensureClassData();ensureSubjectData();
   if(!Array.isArray(data.customSkills))data.customSkills=[];
-  document.getElementById('appName').textContent=data.settings.name;
+  setBrandAppName(data.settings.name);
   document.title=data.settings.name;
   populateSelects();
   renderClasses();renderSubjects();renderDashboard();renderStudents();
