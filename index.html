@@ -1127,6 +1127,58 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(max-width:620px){#dashboard .navi-below-kpi .navi-stage{height:260px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.84)!important;transform-origin:center bottom!important}}
 @media(prefers-reduced-motion:reduce){#dashboard .navi-wrap.navi-3d,#dashboard .navi-3d .navi-eye,#dashboard .navi-3d .navi-arm.a2{animation:none!important}}
 </style>
+<style id="v9-8-navi-3d-pro">
+/* V9.8 - refined professional 3D/2.5D NAVI, HTML/CSS only */
+#dashboard .navi-below-kpi .navi-stage{height:330px!important;padding-top:2px!important;background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.82),rgba(255,255,255,0) 47%)!important}
+#dashboard .navi-below-kpi .navi-wrap.navi-3d{width:210px!important;height:305px!important;animation:naviProIdle 4.6s ease-in-out infinite!important;transform-origin:50% 100%!important}
+@keyframes naviProIdle{0%,100%{transform:translateY(0) rotateZ(0)}45%{transform:translateY(-3px) rotateZ(.35deg)}55%{transform:translateY(-3px) rotateZ(-.35deg)}}
+#dashboard .navi-3d .navi-shadow{left:43px!important;bottom:2px!important;width:126px!important;height:19px!important;background:radial-gradient(ellipse,rgba(22,54,55,.28),rgba(22,54,55,0) 72%)!important;filter:blur(3px)!important;animation:naviShadowBreath 4.6s ease-in-out infinite!important}
+@keyframes naviShadowBreath{50%{transform:scaleX(.92);opacity:.78}}
+/* head: slightly smaller and more adult */
+#dashboard .navi-3d .navi-backhair{left:52px!important;top:13px!important;width:108px!important;height:118px!important;border-radius:49% 49% 42% 42%!important;background:linear-gradient(118deg,#21484a 0%,#17383b 45%,#0d292c 100%)!important;box-shadow:inset 11px 7px 15px rgba(255,255,255,.08),inset -13px -9px 20px rgba(0,0,0,.25),0 12px 22px rgba(16,53,55,.17)!important}
+#dashboard .navi-3d .navi-head{left:63px!important;top:25px!important;width:84px!important;height:94px!important;border-radius:47% 47% 49% 49%!important;background:radial-gradient(circle at 34% 22%,#ffe8d9 0 11%,#f6c9ad 43%,#e9ab8c 100%)!important;box-shadow:inset 8px 5px 11px rgba(255,255,255,.4),inset -9px -6px 13px rgba(172,88,63,.13),0 8px 15px rgba(63,42,32,.13)!important}
+#dashboard .navi-3d .navi-ear{top:61px!important;width:17px!important;height:25px!important}.navi-3d .ear-l{left:55px!important}.navi-3d .ear-r{left:140px!important}
+#dashboard .navi-3d .navi-hair{left:58px!important;top:12px!important;width:99px!important;height:54px!important;background:linear-gradient(145deg,#315a5c 0%,#1a3c3f 48%,#0d292b 100%)!important;box-shadow:inset 10px 6px 10px rgba(255,255,255,.10),0 5px 9px rgba(0,0,0,.15)!important}
+#dashboard .navi-3d .navi-fringe.f1{left:67px!important;top:36px!important;width:40px!important;height:27px!important}.navi-3d .navi-fringe.f2{left:104px!important;top:34px!important;width:40px!important;height:25px!important}
+#dashboard .navi-3d .navi-brow{top:66px!important}.navi-3d .b1{left:76px!important}.navi-3d .b2{left:116px!important}
+#dashboard .navi-3d .navi-eye{top:73px!important;width:20px!important;height:15px!important;box-shadow:inset 0 -2px 3px rgba(57,83,79,.08),0 1px 2px rgba(255,255,255,.9)!important}.navi-3d .navi-eye.e1{left:74px!important}.navi-3d .navi-eye.e2{left:115px!important}
+#dashboard .navi-3d .navi-eye:before{left:5px!important;top:2px!important;width:11px!important;height:11px!important;background:radial-gradient(circle at 34% 28%,#fff 0 9%,#bfe9e1 11% 20%,#4d9993 22% 47%,#174f52 49% 72%,#081e20 74%)!important}
+#dashboard .navi-3d .navi-eye:after{left:12px!important;top:3px!important;width:3.5px!important;height:3.5px!important}
+#dashboard .navi-3d .navi-nose{left:103px!important;top:91px!important}.navi-3d .bl1{left:71px!important}.navi-3d .bl2{left:126px!important}#dashboard .navi-3d .navi-blush{top:94px!important;opacity:.8}
+#dashboard .navi-3d .navi-smile{left:96px!important;top:101px!important;width:20px!important;height:9px!important;border-bottom-width:2px!important}
+/* neck + torso: longer, narrower, less toy-like */
+#dashboard .navi-3d .navi-neck{left:94px!important;top:113px!important;width:25px!important;height:24px!important}
+#dashboard .navi-3d .navi-body{left:52px!important;top:129px!important;width:108px!important;height:103px!important;border-radius:25px 25px 18px 18px!important;background:linear-gradient(145deg,#ffffff 0%,#edf4f0 58%,#dce8e3 100%)!important;box-shadow:inset 8px 5px 13px rgba(255,255,255,.88),inset -9px -9px 15px rgba(52,94,91,.12),0 12px 19px rgba(25,69,69,.15)!important}
+#dashboard .navi-3d .navi-body:before{height:34px!important;background:linear-gradient(145deg,#2b7475,#174f52 68%,#103d40)!important}
+#dashboard .navi-3d .navi-collar{top:134px!important;width:34px!important;height:26px!important}.navi-3d .c1{left:76px!important}.navi-3d .c2{left:103px!important}
+#dashboard .navi-3d .navi-scarf{left:98px!important;top:144px!important;width:17px!important;height:38px!important;background:linear-gradient(145deg,#e0bc7e,#b9874b)!important}
+#dashboard .navi-3d .navi-badge{left:125px!important;top:166px!important;width:29px!important;height:16px!important;font-size:6.2px!important}
+/* arms: articulated upper/lower arms; hide old one-piece hands */
+#dashboard .navi-3d .navi-arm{top:140px!important;width:26px!important;height:64px!important;border-radius:16px!important;background:linear-gradient(145deg,#f9fcfa,#dce9e4)!important;overflow:visible!important;box-shadow:inset 4px 2px 6px rgba(255,255,255,.85),inset -4px -4px 7px rgba(42,90,87,.12),0 5px 8px rgba(26,69,68,.10)!important}
+#dashboard .navi-3d .navi-arm.a1{left:36px!important;transform:rotate(7deg)!important}#dashboard .navi-3d .navi-arm.a2{right:31px!important;transform-origin:13px 8px!important;animation:naviProWave 3.8s ease-in-out infinite!important}
+@keyframes naviProWave{0%,100%{transform:rotate(-22deg)}45%,55%{transform:rotate(-34deg)}}
+#dashboard .navi-3d .navi-arm:before{content:"";position:absolute;left:3px;top:45px;width:22px;height:49px;border-radius:15px;background:linear-gradient(145deg,#f9fcfa,#dce9e4);box-shadow:inset 3px 2px 5px rgba(255,255,255,.8),inset -3px -3px 6px rgba(42,90,87,.10);transform-origin:11px 5px}
+#dashboard .navi-3d .navi-arm.a1:before{transform:rotate(-10deg)}#dashboard .navi-3d .navi-arm.a2:before{transform:rotate(-16deg)}
+#dashboard .navi-3d .navi-hand{left:4px!important;bottom:-38px!important;width:20px!important;height:22px!important;border-radius:48% 48% 44% 44%!important;background:radial-gradient(circle at 34% 24%,#ffe3d2,#efb594 68%,#dc9b7c)!important;z-index:3!important}
+/* tablet: slimmer, cleaner management device */
+#dashboard .navi-3d .navi-tablet{left:31px!important;top:183px!important;width:45px!important;height:59px!important;border-radius:9px!important;border:2px solid #cda566!important;background:linear-gradient(145deg,#315e61,#123b3f)!important;box-shadow:0 7px 11px rgba(0,0,0,.18),inset 0 0 0 2px rgba(255,255,255,.06)!important;transform:rotate(-7deg)!important}
+#dashboard .navi-3d .navi-tablet span{left:6px!important;right:6px!important;top:7px!important;height:39px!important;background:linear-gradient(180deg,#e9f6f2,#fbfdfb)!important;box-shadow:inset 0 8px 0 #74a79e!important}
+#dashboard .navi-3d .navi-tablet span:after{content:"";position:absolute;left:6px;right:6px;top:14px;height:3px;border-radius:3px;background:#b7d5cd;box-shadow:0 7px 0 #d5e6e1,0 14px 0 #d5e6e1}
+/* lower body: longer legs and more polished shoes */
+#dashboard .navi-3d .navi-skirt{left:61px!important;top:219px!important;width:91px!important;height:38px!important;background:linear-gradient(145deg,#28686a,#174f52 68%,#0f393c)!important;clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)!important}
+#dashboard .navi-3d .navi-leg{top:249px!important;width:20px!important;height:43px!important;border-radius:7px 7px 9px 9px!important}.navi-3d .navi-leg.l1{left:76px!important}.navi-3d .navi-leg.l2{left:116px!important}
+#dashboard .navi-3d .navi-shoe{top:283px!important;width:33px!important;height:16px!important;border-radius:58% 64% 42% 42%!important;background:linear-gradient(145deg,#385052,#152c2e)!important;box-shadow:inset 4px 2px 4px rgba(255,255,255,.08),0 5px 7px rgba(0,0,0,.18)!important}.navi-3d .navi-shoe.s1{left:66px!important}.navi-3d .navi-shoe.s2{left:112px!important}
+/* speech bubble: more compact so mascot remains focal */
+#dashboard .navi-info.navi-speech-bubble{margin:0 10px 8px!important;padding:12px 14px 12px!important;border-radius:18px!important;box-shadow:0 10px 24px rgba(29,72,70,.09)!important}
+#dashboard .navi-info.navi-speech-bubble:after{bottom:-10px!important;width:20px!important;height:20px!important}
+#dashboard .navi-info.navi-speech-bubble .navi-kicker{padding:4px 8px!important;font-size:9.5px!important}
+#dashboard .navi-info.navi-speech-bubble h3{margin:6px 0 3px!important;font-size:16px!important}
+#dashboard .navi-info.navi-speech-bubble p{font-size:12px!important;line-height:1.45!important;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#dashboard .navi-info.navi-speech-bubble .navi-action{margin-top:8px!important;min-height:34px!important;padding:7px 12px!important}
+@media(max-width:900px){#dashboard .navi-below-kpi .navi-stage{height:305px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.9)!important;transform-origin:center bottom!important}}
+@media(max-width:620px){#dashboard .navi-below-kpi .navi-stage{height:286px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.84)!important;transform-origin:center bottom!important}}
+@media(prefers-reduced-motion:reduce){#dashboard .navi-wrap.navi-3d,#dashboard .navi-3d .navi-eye,#dashboard .navi-3d .navi-arm.a2,#dashboard .navi-3d .navi-shadow{animation:none!important}}
+</style>
 </head>
 <body>
 <div class="app">
