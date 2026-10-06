@@ -936,6 +936,59 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(max-width:760px){#dashboard .teacher-hero{display:block!important;height:390px!important;min-height:390px!important}#dashboard .teacher-slide-area{height:235px!important}#dashboard .teacher-slide-area .v8-slide{padding:22px 20px 40px!important}#dashboard .teacher-slide-area .v8-copy h2{font-size:25px!important;max-width:100%!important}#dashboard .teacher-slide-area .v8-copy p{font-size:12.5px!important;max-width:100%!important}#dashboard .teacher-slide-area .v8-dots{left:20px!important;bottom:12px!important}#dashboard .teacher-navi-panel{position:absolute;left:20px;right:20px;bottom:10px;height:137px;margin:0!important;display:grid;grid-template-columns:1fr 96px;grid-template-rows:1fr auto;gap:4px 8px;padding:10px 12px!important}#dashboard .navi-speech{grid-column:1;grid-row:1;margin:0!important;align-self:center}#dashboard .navi-stage{grid-column:2;grid-row:1/3;height:112px}#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.50);transform-origin:center bottom}#dashboard .navi-role{grid-column:1;grid-row:2;justify-self:start}#dashboard .teacher-hero>.v8-arrow{display:none!important}}
 @media(max-width:480px){#dashboard .teacher-hero{height:410px!important;min-height:410px!important}#dashboard .teacher-slide-area{height:255px!important}#dashboard .teacher-slide-area .v8-copy h2{font-size:23px!important}.hero-actions{gap:7px!important}.hero-btn{padding:8px 10px!important;font-size:11px!important}}
 </style>
+
+<style id="v9-3-navi-clean-panel">
+/* V9.3 - clean teacher assistant panel: no overlap, no cramped controls */
+#dashboard .teacher-hero{grid-template-columns:minmax(0,1fr) 292px!important;height:300px!important;min-height:300px!important;gap:18px!important;padding:0!important;background:linear-gradient(120deg,#174F53 0%,#236568 68%,#628B80 100%)!important}
+#dashboard .teacher-slide-area{height:300px!important}
+#dashboard .teacher-slide-area .v8-slide{padding:28px 26px 50px 58px!important}
+#dashboard .teacher-slide-area .v8-copy{max-width:640px!important}
+#dashboard .teacher-slide-area .v8-copy h2{font-size:31px!important;line-height:1.08!important;max-width:590px!important}
+#dashboard .teacher-slide-area .v8-copy p{max-width:590px!important}
+#dashboard .teacher-navi-panel{position:relative!important;align-self:stretch!important;height:auto!important;margin:16px 16px 16px 0!important;padding:14px 14px 12px!important;border-radius:20px!important;display:grid!important;grid-template-rows:72px 1fr 24px!important;gap:6px!important;justify-items:center!important;align-items:center!important;overflow:hidden!important;background:linear-gradient(160deg,#F8FBF9 0%,#F4F1E9 100%)!important}
+#dashboard .navi-speech{box-sizing:border-box!important;width:100%!important;height:72px!important;margin:0!important;padding:9px 11px!important;border-radius:13px!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+#dashboard .navi-speech strong{font-size:10.5px!important;line-height:1.2!important;margin:0 0 3px!important}
+#dashboard .navi-speech p{font-size:10.8px!important;line-height:1.28!important;display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+#dashboard .navi-speech:after{left:50%!important;bottom:-7px!important}
+#dashboard .navi-stage{height:158px!important;width:100%!important;overflow:hidden!important;display:flex!important;align-items:flex-end!important;justify-content:center!important}
+#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.68)!important;transform-origin:center bottom!important;margin:0 auto -9px!important}
+#dashboard .navi-role{position:relative!important;z-index:6!important;max-width:100%!important;height:24px!important;box-sizing:border-box!important;padding:4px 10px!important;border-radius:999px!important;background:#fff!important;border:1px solid #D9E4DF!important;color:#174F53!important;font-size:9.5px!important;font-weight:800!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+#dashboard .teacher-hero>.v8-arrow{top:auto!important;bottom:18px!important;width:32px!important;height:32px!important;z-index:12!important;background:rgba(255,255,255,.16)!important;border:1px solid rgba(255,255,255,.28)!important}
+#dashboard .teacher-hero>.v8-arrow.prev{left:auto!important;right:58px!important}
+#dashboard .teacher-hero>.v8-arrow:not(.prev){right:18px!important}
+#dashboard .teacher-slide-area .v8-dots{left:58px!important;bottom:20px!important}
+@media(max-width:1050px){#dashboard .teacher-hero{grid-template-columns:minmax(0,1fr) 260px!important;gap:12px!important}#dashboard .teacher-slide-area .v8-slide{padding-left:34px!important}#dashboard .teacher-slide-area .v8-dots{left:34px!important}#dashboard .teacher-navi-panel{margin-right:12px!important}#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.62)!important}}
+@media(max-width:760px){#dashboard .teacher-hero{display:block!important;height:430px!important;min-height:430px!important;padding:0!important}#dashboard .teacher-slide-area{height:245px!important}#dashboard .teacher-slide-area .v8-slide{height:245px!important;padding:20px 18px 42px!important}#dashboard .teacher-slide-area .v8-dots{left:18px!important;bottom:12px!important}#dashboard .teacher-navi-panel{position:absolute!important;left:18px!important;right:18px!important;bottom:12px!important;height:158px!important;margin:0!important;padding:9px 10px!important;display:grid!important;grid-template-columns:minmax(0,1fr) 92px!important;grid-template-rows:1fr 24px!important;gap:5px 8px!important}#dashboard .navi-speech{grid-column:1!important;grid-row:1!important;height:94px!important}#dashboard .navi-stage{grid-column:2!important;grid-row:1/3!important;height:130px!important}#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.50)!important;margin-bottom:-15px!important}#dashboard .navi-role{grid-column:1!important;grid-row:2!important;justify-self:start!important}#dashboard .teacher-hero>.v8-arrow{display:none!important}}
+</style>
+
+<style id="v9-4-navi-below-kpi">
+/* V9.4 — slideshow clean; NAVI lives below KPI as a teacher-assistant column */
+#dashboard .teacher-hero{display:block!important;height:270px!important;min-height:270px!important;padding:0!important;background:linear-gradient(120deg,#174F53 0%,#236568 68%,#628B80 100%)!important}
+#dashboard .teacher-slide-area{height:270px!important;width:100%!important}
+#dashboard .teacher-slide-area .v8-slide{height:270px!important;min-height:270px!important;padding:28px 74px 48px 58px!important}
+#dashboard .teacher-slide-area .v8-copy{max-width:760px!important}
+#dashboard .teacher-slide-area .v8-copy h2{max-width:720px!important;font-size:32px!important}
+#dashboard .teacher-slide-area .v8-copy p{max-width:690px!important}
+#dashboard .teacher-hero>.v8-arrow{top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;width:34px!important;height:34px!important}
+#dashboard .teacher-hero>.v8-arrow.prev{left:14px!important;right:auto!important}
+#dashboard .teacher-hero>.v8-arrow:not(.prev){right:14px!important}
+#dashboard .teacher-hero>.v8-arrow:hover{transform:translateY(-50%) scale(1.06)!important}
+#dashboard .teacher-slide-area .v8-dots{left:58px!important;bottom:18px!important}
+#dashboard .dashboard-insight-row{display:grid!important;grid-template-columns:250px minmax(0,1fr) minmax(0,1fr)!important;gap:16px!important;margin-top:16px!important;align-items:stretch!important}
+#dashboard .dashboard-insight-row>.card{margin:0!important;min-width:0!important}
+#dashboard .navi-below-kpi{position:relative!important;height:auto!important;min-height:330px!important;margin:0!important;padding:18px 16px 16px!important;border-radius:18px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:center!important;overflow:hidden!important;background:linear-gradient(180deg,#EEF5F1 0%,#F9F6EE 100%)!important;border:1px solid #DCE6E1!important;box-shadow:var(--ui-shadow)!important}
+#dashboard .navi-below-kpi:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;top:-72px;right:-70px;background:rgba(31,98,101,.07)}
+#dashboard .navi-below-kpi .navi-stage{height:174px!important;width:100%!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;overflow:hidden!important;margin-bottom:4px!important}
+#dashboard .navi-below-kpi .navi-wrap{transform:scale(.72)!important;transform-origin:center bottom!important;margin-bottom:-8px!important}
+#dashboard .navi-info{position:relative!important;z-index:5!important;width:100%!important;text-align:left!important;background:#FFFDF9!important;border:1px solid #E0E7E2!important;border-radius:14px!important;padding:12px 13px!important;box-sizing:border-box!important}
+#dashboard .navi-info .navi-kicker{display:block!important;color:#A0783D!important;font-size:9.5px!important;font-weight:850!important;letter-spacing:.08em!important;margin-bottom:4px!important}
+#dashboard .navi-info h3{margin:0 0 5px!important;font-size:15px!important;color:#174F53!important}
+#dashboard .navi-info p{margin:0!important;color:#526866!important;font-size:11.5px!important;line-height:1.42!important;display:-webkit-box!important;-webkit-line-clamp:4!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+#dashboard .navi-action{margin-top:9px!important;width:100%!important;padding:8px 10px!important;font-size:11px!important}
+@media(max-width:1100px){#dashboard .dashboard-insight-row{grid-template-columns:220px minmax(0,1fr) minmax(0,1fr)!important}#dashboard .navi-below-kpi .navi-wrap{transform:scale(.66)!important}}
+@media(max-width:900px){#dashboard .dashboard-insight-row{grid-template-columns:220px minmax(0,1fr)!important}#dashboard .dashboard-insight-row>.card:last-child{grid-column:1/-1!important}#dashboard .teacher-slide-area .v8-slide{padding-left:48px!important}}
+@media(max-width:650px){#dashboard .teacher-hero,#dashboard .teacher-slide-area{height:300px!important;min-height:300px!important}#dashboard .teacher-slide-area .v8-slide{height:300px!important;min-height:300px!important;padding:24px 20px 48px!important}#dashboard .teacher-slide-area .v8-dots{left:20px!important}#dashboard .dashboard-insight-row{grid-template-columns:1fr!important}#dashboard .dashboard-insight-row>.card:last-child{grid-column:auto!important}#dashboard .navi-below-kpi{min-height:210px!important;display:grid!important;grid-template-columns:112px minmax(0,1fr)!important;gap:10px!important;align-items:center!important;padding:12px!important}#dashboard .navi-below-kpi .navi-stage{height:180px!important;margin:0!important}#dashboard .navi-below-kpi .navi-wrap{transform:scale(.60)!important}#dashboard .navi-info{align-self:center!important}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -977,15 +1030,14 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
     </article>
     <div class="v8-dots"><button class="v8-dot active" onclick="v8SetSlide(0)" aria-label="Trang 1"></button><button class="v8-dot" onclick="v8SetSlide(1)" aria-label="Trang 2"></button><button class="v8-dot" onclick="v8SetSlide(2)" aria-label="Trang 3"></button></div>
   </div>
-  <aside class="teacher-navi-panel" aria-label="NAVI - Trợ lý quản lý đào tạo">
-    <div class="navi-speech"><strong>NAVI · Trợ lý giáo viên</strong><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p></div>
-    <div class="navi-stage"><div class="navi-wrap"><div class="navi-orb"></div><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"></div><div class="navi-arm a2"></div></div></div>
-    <div class="navi-role">NAVI · Trợ lý quản lý đào tạo</div>
-  </aside>
   <button class="v8-arrow prev" onclick="v8Slide(-1)" aria-label="Slide trước">‹</button><button class="v8-arrow" onclick="v8Slide(1)" aria-label="Slide sau">›</button>
 </div>
       <div class="grid g4" id="metrics"><div class="card metric-card"><div class="small">Sinh viên</div><div class="metric">4</div></div><div class="card metric-card"><div class="small">Nhóm nghiệp vụ</div><div class="metric">7</div></div><div class="card metric-card"><div class="small">Lớp đào tạo</div><div class="metric">6</div></div><div class="card metric-card"><div class="small">Môn học</div><div class="metric">6</div></div></div>
-      <div class="grid g2" style="margin-top:16px">
+      <div class="dashboard-insight-row">
+        <aside class="teacher-navi-panel navi-below-kpi" aria-label="NAVI - Trợ lý quản lý đào tạo">
+          <div class="navi-stage"><div class="navi-wrap"><div class="navi-orb"></div><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"></div><div class="navi-arm a2"></div></div></div>
+          <div class="navi-info"><span class="navi-kicker">NAVI · TRỢ LÝ GIÁO VIÊN</span><h3>Điểm cần chú ý</h3><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p><button class="btn navi-action" onclick="v8Go('reports','Báo cáo')">Xem báo cáo</button></div>
+        </aside>
         <div class="card"><h3>Tiến độ theo nghiệp vụ</h3><div id="deptProgress"><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Kỹ năng chung</b><span>32%</span></div><div class="progress"><span style="width:32%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Buồng</b><span>24%</span></div><div class="progress"><span style="width:24%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bàn</b><span>18%</span></div><div class="progress"><span style="width:18%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bar</b><span>12%</span></div><div class="progress"><span style="width:12%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bếp</b><span>10%</span></div><div class="progress"><span style="width:10%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Lễ tân</b><span>19%</span></div><div class="progress"><span style="width:19%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Du lịch</b><span>22%</span></div><div class="progress"><span style="width:22%"></span></div></div></div></div>
         <div class="card"><h3>Kỹ năng cần ưu tiên</h3><div id="prioritySkills"><div class="notice" style="margin:8px 0">Nguyễn Minh Anh: Cần luyện thêm thao tác nghiệp vụ buồng</div><div class="notice" style="margin:8px 0">Trần Quốc Bảo: Tiếp tục luyện kỹ năng phục vụ</div></div></div>
       </div>
