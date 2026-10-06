@@ -1197,23 +1197,39 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 }
 </style>
 
-<style id="v10-svg-navi">
-#dashboard .navi-below-kpi .navi-stage{height:315px!important;margin-top:-22px!important;display:grid!important;place-items:start center!important;overflow:visible!important}
-#dashboard .navi-svg-wrap{width:218px;height:300px;position:relative;margin:0 auto;--eye-x:0px;--eye-y:0px;animation:svgNaviIdle 3.8s ease-in-out infinite;transform-origin:center bottom}
-#dashboard .navi-svg{width:100%;height:100%;overflow:visible;display:block}
-#dashboard .navi-svg .svg-pupil{transform:translate(var(--eye-x),var(--eye-y));transform-box:fill-box;transform-origin:center;transition:transform .08s linear}
-#dashboard .navi-svg .svg-eye{transform-origin:center;animation:svgBlink 5.2s infinite}
-#dashboard .navi-svg .svg-wave{transform-box:fill-box;transform-origin:12% 15%;animation:svgWave 3.1s ease-in-out infinite}
-#dashboard .navi-svg .svg-shadow{animation:svgShadow 3.8s ease-in-out infinite;transform-origin:center}
-@keyframes svgNaviIdle{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(.35deg)}}
-@keyframes svgBlink{0%,44%,48%,100%{transform:scaleY(1)}46%{transform:scaleY(.12)}}
-@keyframes svgWave{0%,100%{transform:rotate(0)}45%{transform:rotate(-8deg)}65%{transform:rotate(3deg)}}
-@keyframes svgShadow{0%,100%{transform:scaleX(1);opacity:.16}50%{transform:scaleX(.9);opacity:.11}}
-#dashboard .navi-info.navi-speech-bubble{position:relative;z-index:3;margin:0 8px!important;padding:12px 14px!important;border-radius:22px!important}
-#dashboard .navi-info.navi-speech-bubble:after{left:50%!important;transform:translateX(-50%) rotate(45deg)!important}
-@media(max-width:900px){#dashboard .navi-svg-wrap{width:205px;height:282px}#dashboard .navi-below-kpi .navi-stage{height:292px!important;margin-top:-18px!important}}
-@media(max-width:620px){#dashboard .navi-svg-wrap{width:190px;height:262px}#dashboard .navi-below-kpi .navi-stage{height:270px!important;margin-top:-15px!important}}
-@media(prefers-reduced-motion:reduce){#dashboard .navi-svg-wrap,#dashboard .navi-svg .svg-eye,#dashboard .navi-svg .svg-wave,#dashboard .navi-svg .svg-shadow{animation:none!important}}
+<style id="v10-1-stable-layout-navi">
+/* V10.1: restore stable 3-column dashboard and refine CSS mascot without SVG/image */
+#dashboard .dashboard-insight-row{
+ display:grid!important;grid-template-columns:270px minmax(0,1fr) minmax(0,1fr)!important;
+ gap:16px!important;align-items:stretch!important;width:100%!important;margin-top:16px!important;
+}
+#dashboard .dashboard-insight-row>.card{min-width:0!important;width:auto!important;margin:0!important}
+#dashboard .navi-below-kpi{min-height:390px!important;padding:16px 14px 14px!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;overflow:hidden!important}
+#dashboard .navi-info.navi-speech-bubble{order:1!important;margin:0 0 2px!important;width:100%!important;min-height:145px!important;padding:14px 14px 13px!important;border-radius:20px!important;box-sizing:border-box!important}
+#dashboard .navi-info.navi-speech-bubble:before{display:none!important}
+#dashboard .navi-info.navi-speech-bubble:after{content:""!important;display:block!important;position:absolute!important;left:50%!important;bottom:-10px!important;width:20px!important;height:20px!important;background:#fffdf9!important;border-right:1px solid #d8e3de!important;border-bottom:1px solid #d8e3de!important;transform:translateX(-50%) rotate(45deg)!important;border-radius:0 0 4px 0!important}
+#dashboard .navi-below-kpi .navi-stage{order:2!important;height:218px!important;min-height:218px!important;margin:0!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;overflow:visible!important}
+#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.67)!important;transform-origin:center bottom!important;margin:0 auto -2px!important}
+/* more polished CSS character */
+#dashboard .navi-3d .navi-backhair{background:linear-gradient(135deg,#264f51 0%,#173b3e 50%,#0c292b 100%)!important;box-shadow:inset 10px 6px 16px rgba(255,255,255,.08),inset -12px -8px 18px rgba(0,0,0,.2),0 10px 18px rgba(20,60,61,.12)!important}
+#dashboard .navi-3d .navi-hair{background:linear-gradient(145deg,#315d5f 0%,#1a3e41 50%,#0d2b2d 100%)!important}
+#dashboard .navi-3d .navi-head{background:radial-gradient(circle at 36% 22%,#ffe9dc 0 12%,#f7ccb2 44%,#eeb293 100%)!important;box-shadow:inset 7px 5px 11px rgba(255,255,255,.38),inset -8px -6px 12px rgba(153,78,57,.11),0 8px 14px rgba(52,46,37,.10)!important}
+#dashboard .navi-3d .navi-eye{border-radius:50% 50% 46% 46%!important;background:#fff!important;border:1px solid rgba(25,75,75,.14)!important;box-shadow:inset 0 -2px 3px rgba(20,70,70,.07)!important}
+#dashboard .navi-3d .navi-eye:before{background:radial-gradient(circle at 34% 28%,#fff 0 10%,#a9ded6 12% 24%,#438d88 26% 50%,#174f52 52% 73%,#071c1e 75%)!important}
+#dashboard .navi-3d .navi-body{background:linear-gradient(145deg,#fff 0%,#f2f6f3 56%,#dfe9e5 100%)!important;box-shadow:inset 8px 5px 12px rgba(255,255,255,.82),inset -8px -8px 13px rgba(44,89,86,.09),0 10px 17px rgba(23,79,83,.12)!important}
+#dashboard .navi-3d .navi-body:before{background:linear-gradient(145deg,#2a7375,#174f52 68%,#103d40)!important}
+#dashboard .navi-3d .navi-arm{background:linear-gradient(145deg,#f8fbf9,#dfeae6)!important}
+#dashboard .navi-3d .navi-hand{background:radial-gradient(circle at 35% 24%,#ffe7d8,#efb998 68%,#dd9e7f)!important}
+#dashboard .navi-3d .navi-tablet{transform:rotate(-5deg)!important;box-shadow:0 7px 12px rgba(0,0,0,.15)!important}
+#dashboard .navi-3d .navi-leg{background:linear-gradient(180deg,#f1b99a,#df9f7f)!important}
+#dashboard .navi-3d .navi-shoe{background:linear-gradient(145deg,#365153,#172f31)!important;box-shadow:inset 3px 2px 4px rgba(255,255,255,.08),0 4px 5px rgba(0,0,0,.16)!important}
+#dashboard .navi-3d .navi-shadow{opacity:.75!important}
+/* keep analysis cards aligned and compact */
+#dashboard .dashboard-insight-row>.card:not(.navi-below-kpi){min-height:390px!important;padding:18px!important;overflow:hidden!important}
+#dashboard .dashboard-insight-row>.card:not(.navi-below-kpi) h3{margin-top:0!important}
+@media(max-width:1100px){#dashboard .dashboard-insight-row{grid-template-columns:250px minmax(0,1fr) minmax(0,1fr)!important;gap:12px!important}}
+@media(max-width:900px){#dashboard .dashboard-insight-row{grid-template-columns:240px minmax(0,1fr)!important}#dashboard .dashboard-insight-row>.card:last-child{grid-column:1/-1!important;min-height:auto!important}}
+@media(max-width:650px){#dashboard .dashboard-insight-row{grid-template-columns:1fr!important}#dashboard .dashboard-insight-row>.card:last-child{grid-column:auto!important}#dashboard .navi-below-kpi{min-height:360px!important}#dashboard .navi-below-kpi .navi-stage{height:205px!important;min-height:205px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.62)!important}#dashboard .dashboard-insight-row>.card:not(.navi-below-kpi){min-height:auto!important}}
 </style>
 </head>
 <body>
@@ -1262,44 +1278,7 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
       <div class="dashboard-insight-row">
         <aside class="teacher-navi-panel navi-below-kpi" aria-label="NAVI - Trợ lý quản lý đào tạo">
           <div class="navi-info navi-speech-bubble"><span class="navi-kicker">NAVI · TRỢ LÝ GIÁO VIÊN</span><h3>Điểm cần chú ý</h3><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p><button class="btn navi-action" onclick="v8Go('reports','Báo cáo')">Xem báo cáo</button></div>
-          <div class="navi-stage"><div class="navi-svg-wrap" id="naviMascot" aria-label="NAVI - trợ lý giáo viên SVG 2.5D">
-<svg class="navi-svg" viewBox="0 0 240 330" role="img" aria-label="NAVI trợ lý giáo viên">
-<defs>
- <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE4D2"/><stop offset=".62" stop-color="#F3BE9F"/><stop offset="1" stop-color="#D99579"/></linearGradient>
- <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#21494A"/><stop offset=".55" stop-color="#123B3E"/><stop offset="1" stop-color="#08292C"/></linearGradient>
- <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#EAF2EF"/><stop offset="1" stop-color="#CFE1DC"/></linearGradient>
- <linearGradient id="vest" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B7978"/><stop offset="1" stop-color="#124B4E"/></linearGradient>
- <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#153F41" flood-opacity=".22"/></filter>
- <filter id="faceGlow"><feGaussianBlur stdDeviation="5"/></filter>
-</defs>
-<ellipse class="svg-shadow" cx="120" cy="309" rx="55" ry="10" fill="#173F41" opacity=".16"/>
-<g class="svg-character" filter="url(#softShadow)">
- <!-- back hair --> <path d="M62 91C61 38 87 20 121 20c39 0 64 25 61 76l-9 67c-8 22-29 31-53 31-29 0-50-13-56-37z" fill="url(#hair)"/>
- <!-- ears --> <ellipse cx="63" cy="105" rx="13" ry="18" fill="url(#skin)"/><ellipse cx="178" cy="105" rx="13" ry="18" fill="url(#skin)"/>
- <!-- face --> <path d="M76 68c8-22 27-32 46-32 29 0 49 18 49 53v25c0 35-23 59-51 59-28 0-50-24-50-58V92c0-9 2-17 6-24z" fill="url(#skin)"/>
- <ellipse cx="102" cy="124" rx="18" ry="8" fill="#F58F9B" opacity=".22"/><ellipse cx="151" cy="124" rx="18" ry="8" fill="#F58F9B" opacity=".22"/>
- <!-- hair cap and fringe --> <path d="M68 83c0-40 25-61 57-61 30 0 52 17 58 48-19-12-38-18-59-15-18 3-34 14-56 28z" fill="url(#hair)"/>
- <path d="M70 78c18-31 45-35 66-30-7 11-17 20-31 25 17-1 31-6 43-15-1 13-9 24-22 31-20 9-39 7-56-11z" fill="#173F41"/>
- <path d="M87 48c15-13 33-17 52-11" fill="none" stroke="#477475" stroke-width="7" stroke-linecap="round" opacity=".45"/>
- <!-- brows --> <path d="M87 91q13-7 25 0M135 90q13-7 25 1" fill="none" stroke="#684B43" stroke-width="3" stroke-linecap="round"/>
- <!-- eyes -->
- <g class="svg-eye"><ellipse cx="100" cy="106" rx="14" ry="12" fill="#fff"/><circle class="svg-pupil" cx="100" cy="106" r="7" fill="#205B61"/><circle class="svg-pupil" cx="98" cy="103" r="2.4" fill="#fff"/></g>
- <g class="svg-eye"><ellipse cx="147" cy="106" rx="14" ry="12" fill="#fff"/><circle class="svg-pupil" cx="147" cy="106" r="7" fill="#205B61"/><circle class="svg-pupil" cx="145" cy="103" r="2.4" fill="#fff"/></g>
- <!-- nose/mouth --> <path d="M123 108q-3 9 3 11" fill="none" stroke="#C98972" stroke-width="2" stroke-linecap="round"/><path d="M110 135q14 13 29 0" fill="none" stroke="#B75F66" stroke-width="3" stroke-linecap="round"/>
- <!-- neck --> <path d="M108 164h27v26h-27z" fill="url(#skin)"/>
- <!-- legs behind --> <path d="M93 261h27v44H93zM129 261h27v44h-27z" fill="url(#skin)"/>
- <!-- shoes --> <path d="M84 299c10-8 27-8 38 0v10H82c-3-3-2-7 2-10zM128 299c10-8 27-8 38 0 4 3 5 7 2 10h-40z" fill="#173B3E"/>
- <!-- torso --> <path d="M78 184q13-16 31-16h26q19 0 31 16l13 76H66z" fill="url(#shirt)"/>
- <path d="M79 184q12-15 31-15h25q19 0 31 15l-10 31H89z" fill="url(#vest)"/>
- <!-- collar/scarf --> <path d="M104 170l18 18-20 13-13-23zM140 170l-18 18 20 13 13-23z" fill="#F8FBF9"/><path d="M121 187l10 10-7 31h-8l-6-31z" fill="#C79A56"/>
- <!-- skirt/trouser style --> <path d="M69 250h106l-4 25H73z" fill="#174F52"/>
- <!-- left arm holding tablet --> <path d="M78 190c-15 7-22 24-25 46-2 15 5 22 16 19 9-3 11-12 12-23l8-35z" fill="url(#skin)"/>
- <path d="M77 190c-12 7-17 20-19 34l21 5 10-32z" fill="url(#shirt)"/>
- <!-- right arm wave --> <g class="svg-wave"><path d="M163 188c15 2 27 14 37 29l13 18c6 9 3 18-5 22-8 4-15 0-20-8l-17-23-17-16z" fill="url(#skin)"/><path d="M162 187c12 2 21 10 30 21l-17 16-21-14z" fill="url(#shirt)"/><ellipse cx="211" cy="246" rx="11" ry="12" fill="url(#skin)"/></g>
- <!-- tablet --> <g transform="rotate(-6 63 236)"><rect x="43" y="213" width="43" height="62" rx="8" fill="#173F41" stroke="#C79A56" stroke-width="3"/><rect x="49" y="220" width="31" height="45" rx="4" fill="#F8FBF9"/><rect x="54" y="227" width="21" height="5" rx="2.5" fill="#78AAA0"/><rect x="54" y="238" width="18" height="3" rx="1.5" fill="#C9DED8"/><rect x="54" y="246" width="21" height="3" rx="1.5" fill="#C9DED8"/><rect x="54" y="254" width="15" height="3" rx="1.5" fill="#C9DED8"/></g>
- <!-- badge --> <g><rect x="145" y="207" width="25" height="12" rx="4" fill="#fff"/><text x="157.5" y="215.5" text-anchor="middle" font-size="6" font-weight="800" fill="#174F52">NAVI</text></g>
-</g>
-</svg></div></div></div>
+          <div class="navi-stage"><div class="navi-wrap navi-3d" id="naviMascot" aria-label="NAVI - trợ lý giáo viên 3D"><div class="navi-shadow"></div><div class="navi-backhair"></div><div class="navi-ear ear-l"></div><div class="navi-ear ear-r"></div><div class="navi-head"></div><div class="navi-hair"></div><div class="navi-fringe f1"></div><div class="navi-fringe f2"></div><div class="navi-brow b1"></div><div class="navi-brow b2"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-nose"></div><div class="navi-blush bl1"></div><div class="navi-blush bl2"></div><div class="navi-smile"></div><div class="navi-neck"></div><div class="navi-body"></div><div class="navi-collar c1"></div><div class="navi-collar c2"></div><div class="navi-scarf"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"><span class="navi-hand"></span></div><div class="navi-arm a2"><span class="navi-hand"></span></div><div class="navi-tablet"><span></span></div><div class="navi-skirt"></div><div class="navi-leg l1"></div><div class="navi-leg l2"></div><div class="navi-shoe s1"></div><div class="navi-shoe s2"></div></div></div>
         </aside>
         <div class="card"><h3>Tiến độ theo nghiệp vụ</h3><div id="deptProgress"><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Kỹ năng chung</b><span>32%</span></div><div class="progress"><span style="width:32%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Buồng</b><span>24%</span></div><div class="progress"><span style="width:24%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bàn</b><span>18%</span></div><div class="progress"><span style="width:18%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bar</b><span>12%</span></div><div class="progress"><span style="width:12%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bếp</b><span>10%</span></div><div class="progress"><span style="width:10%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Lễ tân</b><span>19%</span></div><div class="progress"><span style="width:19%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Du lịch</b><span>22%</span></div><div class="progress"><span style="width:22%"></span></div></div></div></div>
         <div class="card"><h3>Kỹ năng cần ưu tiên</h3><div id="prioritySkills"><div class="notice" style="margin:8px 0">Nguyễn Minh Anh: Cần luyện thêm thao tác nghiệp vụ buồng</div><div class="notice" style="margin:8px 0">Trần Quốc Bảo: Tiếp tục luyện kỹ năng phục vụ</div></div></div>
