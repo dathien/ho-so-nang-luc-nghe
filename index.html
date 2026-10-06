@@ -1491,6 +1491,28 @@ body{background:linear-gradient(135deg,#FAF9F6 0%,#F2F6F3 100%)!important}
 @media(max-width:620px){.v8-hero{min-height:340px;border-radius:20px}.v8-slide{padding:24px 20px 50px}.v8-copy h2{font-size:28px}.v8-copy p{max-width:100%;font-size:13.5px}.v8-scene{opacity:.18}.v8-arrow{display:none}.v8-dots{left:20px}.navi-assist{grid-template-columns:56px 1fr}}
 @media(prefers-reduced-motion:reduce){.float-card,.navi-wrap,.navi-eye,.navi-arm.a2,.navi-orb,.metric-card{animation:none!important}.v8-slide{transition:none!important}}
 </style>
+
+<style id="v8-2-palette-fix">
+/* V8.2 — Forest Hospitality: đồng bộ Sidebar + Hero/NAVI + Nội dung */
+:root{
+ --bg:#F7F4EC!important; --surface:#FFFFFF!important; --surface-2:#FBF8F1!important;
+ --text:#26352F!important; --muted:#6F7872!important; --line:#E5DED1!important;
+ --primary:#3F6757!important; --primary-2:#557C6B!important; --success:#5E8067!important;
+ --warning:#B88445!important; --danger:#B85F58!important;
+ --v8-teal:#3F6757!important; --v8-teal2:#557C6B!important; --v8-ivory:#F7F4EC!important;
+ --v8-copper:#B88A52!important; --v8-mint:#EDF2ED!important; --v8-ink:#26352F!important;
+}
+html,body,.app,.main{background:#F7F4EC!important;color:#26352F!important}
+/* 1. Sidebar: tăng tương phản, bỏ cảm giác tối nặng */
+.sidebar{background:linear-gradient(180deg,#35594B 0%,#29483D 100%)!important;border-right:1px solid rgba(255,255,255,.12)!important;box-shadow:8px 0 30px rgba(39,67,57,.08)!important}
+.brand{border-bottom-color:rgba(255,255,255,.16)!important}.brand h1{color:#FFFDF8!important}.brand h1:before{color:#D6B47A!important}.brand p{color:#E8E4DA!important}.brand-levels{color:#F3DDB6!important;border-color:rgba(243,221,182,.35)!important;background:rgba(255,255,255,.07)!important}.brand-edit-btn{color:#FFF8EA!important;border-color:rgba(255,255,255,.24)!important;background:rgba(255,255,255,.08)!important}
+.nav button{color:#EEF1EC!important}.nav button:before{background:#B7C7BE!important;box-shadow:0 0 0 4px rgba(255,255,255,.04)!important}.nav button:hover{background:rgba(255,255,255,.10)!important;color:#fff!important;transform:translateX(2px)}.nav button.active{background:#F7F2E7!important;color:#29483D!important;box-shadow:0 8px 22px rgba(24,44,37,.18)!important}.nav button.active:before{background:#B88A52!important}
+/* 2. Slider + NAVI: forest/sand/bronze */
+.v8-hero{background:linear-gradient(135deg,#315747 0%,#486F5E 56%,#6F8C78 100%)!important;box-shadow:0 18px 42px rgba(49,87,71,.18)!important;border:1px solid rgba(255,255,255,.18)!important}.v8-copy h2,.v8-copy p{color:#FFFDF8!important}.v8-kicker{color:#F1D6A8!important;background:rgba(255,255,255,.09)!important;border-color:rgba(255,255,255,.16)!important}.hero-btn{background:#F4E6CC!important;color:#315747!important;border-color:#F4E6CC!important}.hero-btn:hover{background:#FFF4DF!important}.hero-btn.ghost{background:rgba(255,255,255,.08)!important;color:#FFFDF8!important;border-color:rgba(255,255,255,.30)!important}.v8-dot{background:rgba(255,255,255,.38)!important}.v8-dot.active{background:#F1D6A8!important}.v8-arrow{background:rgba(255,255,255,.10)!important;color:#fff!important;border-color:rgba(255,255,255,.18)!important}.float-card{background:rgba(255,253,248,.94)!important;color:#315747!important;border-color:rgba(255,255,255,.55)!important}.float-card small{color:#718078!important}.navi-assist{background:linear-gradient(135deg,#EEF3EE 0%,#FFFDF8 100%)!important;border:1px solid #D8E2DA!important}.navi-msg strong{color:#315747!important}.navi-msg p{color:#69766F!important}.navi-orb{background:radial-gradient(circle,#fff 0 16%,#E7C98F 18% 35%,#B88A52 38% 60%,transparent 63%)!important}
+/* 3. Nội dung, KPI, bảng, form */
+.topbar h2,h2,h3{color:#29483D!important}.card,.panel,.metric-card{background:#FFF!important;border-color:#E5DED1!important;box-shadow:0 8px 24px rgba(76,63,44,.07)!important}.metric-card:hover,.card:hover{border-color:#D8C7AD!important}.metric,.kpi-value{color:#315747!important}.progress{background:#EEE9DF!important}.progress span{background:linear-gradient(90deg,#557C6B,#B88A52)!important}.btn{border-color:#DCD4C7!important}.btn.primary,.btn.success{background:#3F6757!important;border-color:#3F6757!important;color:#fff!important}.btn.primary:hover,.btn.success:hover{background:#315747!important}.btn.edit{background:#F2E6D2!important;color:#75562F!important;border-color:#E6D2B2!important}.btn.danger{background:#F7E7E4!important;color:#994D47!important;border-color:#EBCBC6!important}input,select,textarea{background:#FFF!important;color:#26352F!important;border-color:#DCD5C9!important}input:focus,select:focus,textarea:focus{border-color:#6F927F!important;box-shadow:0 0 0 3px rgba(85,124,107,.13)!important}.table th,table th{background:#F0ECE3!important;color:#365548!important}.table td,table td{border-color:#E8E1D6!important}.table tbody tr:hover{background:#FBF8F1!important}.badge,.pill{background:#EDF2ED!important;color:#3F6757!important}
+@media(max-width:900px){.sidebar{background:linear-gradient(135deg,#35594B,#29483D)!important}.nav button.active{background:#F7F2E7!important;color:#29483D!important}}
+</style>
 </head><body>${sections}
 </body></html>`;download('Bao-cao-tong-hop-nang-luc-nghe.doc','\ufeff'+html,'application/msword;charset=utf-8')}
 function printStudentReport(){let sid=rpStudent.value;ppStudent.value=sid;renderPassport();showSection('passport','Skill Passport');setTimeout(()=>window.print(),100)}
