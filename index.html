@@ -907,6 +907,35 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 .navi-mini .navi-eye{border-width:2px!important}
 @media(prefers-reduced-motion:reduce){.navi-eye{animation:none!important}}
 </style>
+
+<style id="v9-2-teacher-navi-layout">
+/* V9.2: NAVI is a persistent teacher assistant, separated from slide content */
+#dashboard .teacher-hero{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(300px,.65fr)!important;height:300px!important;min-height:300px!important;background:linear-gradient(120deg,#174F53 0%,#236568 62%,#7B9A8E 100%)!important;overflow:hidden!important}
+#dashboard .teacher-slide-area{position:relative;min-width:0;height:100%;overflow:hidden}
+#dashboard .teacher-slide-area .v8-slide{position:absolute!important;inset:0!important;display:flex!important;align-items:center!important;grid-template-columns:none!important;min-height:0!important;height:100%!important;padding:28px 46px 48px 58px!important;background:transparent!important}
+#dashboard .teacher-slide-area .v8-slide:before{display:none!important}
+#dashboard .teacher-slide-area .v8-copy{max-width:650px!important;padding:0!important}
+#dashboard .teacher-slide-area .v8-copy h2{font-size:32px!important;max-width:620px!important;margin:9px 0 9px!important}
+#dashboard .teacher-slide-area .v8-copy p{max-width:600px!important;color:#E5F0ED!important}
+#dashboard .teacher-navi-panel{position:relative;z-index:3;margin:18px 22px 18px 0;border-radius:20px;background:linear-gradient(155deg,rgba(246,252,249,.98),rgba(248,243,234,.96));border:1px solid rgba(255,255,255,.75);box-shadow:0 15px 35px rgba(11,48,51,.15);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:14px 16px 10px;overflow:hidden}
+#dashboard .teacher-navi-panel:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-42px;top:42px;background:rgba(199,165,106,.20)}
+#dashboard .teacher-navi-panel:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;left:-76px;bottom:-58px;background:rgba(120,152,138,.12)}
+#dashboard .navi-speech{position:relative;z-index:5;width:100%;background:#fff;color:#193A3E;border-radius:14px;padding:10px 12px;box-shadow:0 8px 20px rgba(20,61,64,.10);font-size:11.5px;line-height:1.38;margin-bottom:3px}
+#dashboard .navi-speech:after{content:"";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:9px solid transparent;border-top-color:#fff;border-bottom:0}
+#dashboard .navi-speech strong{display:block;color:#174F53;font-size:11px;margin-bottom:2px}
+#dashboard .navi-speech p{margin:0!important;color:#526A68!important;font-size:11.5px!important;line-height:1.38!important}
+#dashboard .navi-stage{position:relative;z-index:2;height:160px;width:100%;display:flex;align-items:flex-end;justify-content:center;overflow:visible}
+#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.76);transform-origin:center bottom;margin:0 0 -2px!important;animation:naviIdle 3.2s ease-in-out infinite}
+#dashboard .navi-role{position:relative;z-index:5;background:#fff;border:1px solid #D9E6E0;color:#285C5D;border-radius:999px;padding:4px 10px;font-size:9.5px;font-weight:800;white-space:nowrap}
+#dashboard .teacher-hero>.v8-arrow{top:auto!important;bottom:14px!important;width:34px!important;height:34px!important;background:rgba(10,47,50,.32)!important}
+#dashboard .teacher-hero>.v8-arrow.prev{left:auto!important;right:62px!important}
+#dashboard .teacher-hero>.v8-arrow:not(.prev){right:22px!important}
+#dashboard .teacher-slide-area .v8-dots{left:58px!important;bottom:18px!important;top:auto!important;right:auto!important;transform:none!important}
+#dashboard .teacher-slide-area .v8-dot.active{transform:none!important}
+@media(max-width:1050px){#dashboard .teacher-hero{grid-template-columns:minmax(0,1.45fr) 270px!important}#dashboard .teacher-slide-area .v8-slide{padding-left:36px!important;padding-right:28px!important}#dashboard .teacher-slide-area .v8-copy h2{font-size:28px!important}#dashboard .teacher-slide-area .v8-dots{left:36px!important}#dashboard .teacher-navi-panel{margin-right:16px!important}}
+@media(max-width:760px){#dashboard .teacher-hero{display:block!important;height:390px!important;min-height:390px!important}#dashboard .teacher-slide-area{height:235px!important}#dashboard .teacher-slide-area .v8-slide{padding:22px 20px 40px!important}#dashboard .teacher-slide-area .v8-copy h2{font-size:25px!important;max-width:100%!important}#dashboard .teacher-slide-area .v8-copy p{font-size:12.5px!important;max-width:100%!important}#dashboard .teacher-slide-area .v8-dots{left:20px!important;bottom:12px!important}#dashboard .teacher-navi-panel{position:absolute;left:20px;right:20px;bottom:10px;height:137px;margin:0!important;display:grid;grid-template-columns:1fr 96px;grid-template-rows:1fr auto;gap:4px 8px;padding:10px 12px!important}#dashboard .navi-speech{grid-column:1;grid-row:1;margin:0!important;align-self:center}#dashboard .navi-stage{grid-column:2;grid-row:1/3;height:112px}#dashboard .teacher-navi-panel .navi-wrap{transform:scale(.50);transform-origin:center bottom}#dashboard .navi-role{grid-column:1;grid-row:2;justify-self:start}#dashboard .teacher-hero>.v8-arrow{display:none!important}}
+@media(max-width:480px){#dashboard .teacher-hero{height:410px!important;min-height:410px!important}#dashboard .teacher-slide-area{height:255px!important}#dashboard .teacher-slide-area .v8-copy h2{font-size:23px!important}.hero-actions{gap:7px!important}.hero-btn{padding:8px 10px!important;font-size:11px!important}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -935,23 +964,26 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
     <div class="topbar"><div><h2 id="pageTitle">Tổng quan</h2><div class="small" id="today"></div></div><div class="actions"><button class="btn" onclick="exportAllWord()">Xuất Word</button><button class="btn success" onclick="exportAllExcel()">Xuất Excel</button></div></div>
 
     <section id="dashboard" class="section active">
-<div class="v8-hero" id="v8Hero" aria-label="Giới thiệu ứng dụng">
-  <article class="v8-slide active">
-    <div class="v8-copy"><span class="v8-kicker">Hồ sơ năng lực nghề</span><h2>Theo dõi hành trình nghề nghiệp trên một màn hình</h2><p>Quản lý lớp, kết quả học tập, tiến độ đào tạo và năng lực thực hành của sinh viên Trung cấp – Cao đẳng.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('students','Lớp & Sinh viên')">Xem sinh viên</button><button class="hero-btn ghost" onclick="v8Go('reports','Báo cáo')">Mở báo cáo</button></div></div>
-    <div class="v8-scene"><div class="float-card fc1"><small>Sinh viên</small><b>04</b></div><div class="float-card fc2"><small>Tiến độ nghề</small><b>72%</b></div><div class="float-card fc3"><small>HK hiện tại</small><b>HK1</b></div></div>
-  </article>
-  <article class="v8-slide">
-    <div class="v8-copy"><span class="v8-kicker">Hospitality Skills</span><h2>Mỗi nghiệp vụ là một chặng tiến bộ có thể nhìn thấy</h2><p>Buồng, Bàn, Bar, Bếp, Lễ tân, Du lịch và các nhóm do giáo viên tự quản lý đều được tổng hợp thành hồ sơ năng lực trực quan.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('skills','Hồ sơ kỹ năng')">Đánh giá kỹ năng</button><button class="hero-btn ghost" onclick="v8Go('departments','Nhóm nghiệp vụ')">Quản lý nghiệp vụ</button></div></div>
-    <div class="v8-scene"><div class="float-card fc1"><small>Buồng</small><b>84%</b></div><div class="float-card fc2"><small>Bàn</small><b>76%</b></div><div class="float-card fc3"><small>Lễ tân</small><b>91%</b></div></div>
-  </article>
-  <article class="v8-slide">
-    <div class="v8-copy"><span class="v8-kicker">NAVI · Trợ lý năng lực nghề</span><h2>Một trợ lý thân thiện cho giáo viên ngành dịch vụ</h2><p>NAVI đọc dữ liệu đang có trong ứng dụng để nhắc các kỹ năng cần ưu tiên và dẫn nhanh đến màn hình giáo viên cần xử lý.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('reports','Báo cáo')">Xem phân tích</button><button class="hero-btn ghost" onclick="v8Go('passport','Skill Passport')">Mở Skill Passport</button></div></div>
-    <div class="v8-scene"><div class="navi-wrap"><div class="navi-orb"></div><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"></div><div class="navi-arm a2"></div></div></div>
-  </article>
+<div class="v8-hero teacher-hero" id="v8Hero" aria-label="Bảng điều hành đào tạo">
+  <div class="teacher-slide-area">
+    <article class="v8-slide active">
+      <div class="v8-copy"><span class="v8-kicker">Bảng điều hành giáo viên</span><h2>Theo dõi lớp và tiến độ đào tạo trên một màn hình</h2><p>Nắm nhanh tình hình sinh viên, kết quả học tập, tiến độ đào tạo và năng lực thực hành để kịp thời hỗ trợ.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('students','Lớp & Sinh viên')">Xem sinh viên</button><button class="hero-btn ghost" onclick="v8Go('reports','Báo cáo')">Mở báo cáo</button></div></div>
+    </article>
+    <article class="v8-slide">
+      <div class="v8-copy"><span class="v8-kicker">Theo dõi năng lực nghề</span><h2>Phát hiện kỹ năng cần ưu tiên trước khi bị chậm tiến độ</h2><p>Tổng hợp các nhóm nghiệp vụ, mức đánh giá và tiến độ thực hành để giáo viên biết sinh viên nào cần được theo dõi thêm.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('skills','Hồ sơ kỹ năng')">Đánh giá kỹ năng</button><button class="hero-btn ghost" onclick="v8Go('progress','Tiến độ đào tạo')">Xem tiến độ</button></div></div>
+    </article>
+    <article class="v8-slide">
+      <div class="v8-copy"><span class="v8-kicker">Báo cáo & Skill Passport</span><h2>Từ dữ liệu lớp học đến hồ sơ năng lực rõ ràng</h2><p>Giáo viên có thể rà kết quả, kiểm tra kỹ năng đã đạt và mở báo cáo hoặc Skill Passport ngay từ bảng điều hành.</p><div class="hero-actions"><button class="hero-btn" onclick="v8Go('reports','Báo cáo')">Xem phân tích</button><button class="hero-btn ghost" onclick="v8Go('passport','Skill Passport')">Mở Skill Passport</button></div></div>
+    </article>
+    <div class="v8-dots"><button class="v8-dot active" onclick="v8SetSlide(0)" aria-label="Trang 1"></button><button class="v8-dot" onclick="v8SetSlide(1)" aria-label="Trang 2"></button><button class="v8-dot" onclick="v8SetSlide(2)" aria-label="Trang 3"></button></div>
+  </div>
+  <aside class="teacher-navi-panel" aria-label="NAVI - Trợ lý quản lý đào tạo">
+    <div class="navi-speech"><strong>NAVI · Trợ lý giáo viên</strong><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p></div>
+    <div class="navi-stage"><div class="navi-wrap"><div class="navi-orb"></div><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"></div><div class="navi-arm a2"></div></div></div>
+    <div class="navi-role">NAVI · Trợ lý quản lý đào tạo</div>
+  </aside>
   <button class="v8-arrow prev" onclick="v8Slide(-1)" aria-label="Slide trước">‹</button><button class="v8-arrow" onclick="v8Slide(1)" aria-label="Slide sau">›</button>
-  <div class="v8-dots"><button class="v8-dot active" onclick="v8SetSlide(0)"></button><button class="v8-dot" onclick="v8SetSlide(1)"></button><button class="v8-dot" onclick="v8SetSlide(2)"></button></div>
 </div>
-<div class="card navi-assist" id="naviAssist"><div class="navi-mini"><div class="navi-wrap"><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div></div></div><div class="navi-msg"><strong>NAVI · Gợi ý hôm nay</strong><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p></div></div>
       <div class="grid g4" id="metrics"><div class="card metric-card"><div class="small">Sinh viên</div><div class="metric">4</div></div><div class="card metric-card"><div class="small">Nhóm nghiệp vụ</div><div class="metric">7</div></div><div class="card metric-card"><div class="small">Lớp đào tạo</div><div class="metric">6</div></div><div class="card metric-card"><div class="small">Môn học</div><div class="metric">6</div></div></div>
       <div class="grid g2" style="margin-top:16px">
         <div class="card"><h3>Tiến độ theo nghiệp vụ</h3><div id="deptProgress"><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Kỹ năng chung</b><span>32%</span></div><div class="progress"><span style="width:32%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Buồng</b><span>24%</span></div><div class="progress"><span style="width:24%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bàn</b><span>18%</span></div><div class="progress"><span style="width:18%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bar</b><span>12%</span></div><div class="progress"><span style="width:12%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bếp</b><span>10%</span></div><div class="progress"><span style="width:10%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Lễ tân</b><span>19%</span></div><div class="progress"><span style="width:19%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Du lịch</b><span>22%</span></div><div class="progress"><span style="width:22%"></span></div></div></div></div>
@@ -2765,11 +2797,11 @@ function v88AnimateDashboardCounters(){
   });
 }
 
-function v8SetSlide(i){const slides=[...document.querySelectorAll('.v8-slide')],dots=[...document.querySelectorAll('.v8-dot')];if(!slides.length)return;v8SlideIndex=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===v8SlideIndex));dots.forEach((d,n)=>d.classList.toggle('active',n===v8SlideIndex));v8RestartSlider()}
+function v8SetSlide(i){const slides=[...document.querySelectorAll('.v8-slide')],dots=[...document.querySelectorAll('.v8-dot')];if(!slides.length)return;v8SlideIndex=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===v8SlideIndex));dots.forEach((d,n)=>d.classList.toggle('active',n===v8SlideIndex));v8NaviInsight();v8RestartSlider()}
 function v8Slide(step){v8SetSlide(v8SlideIndex+step)}
 function v8RestartSlider(){clearInterval(v8SlideTimer);v8SlideTimer=setInterval(()=>v8SetSlide(v8SlideIndex+1),6500)}
 function v8Go(id,title){if(typeof showSection==='function')showSection(id,title)}
-function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++}))}catch(e){};let msg=n?('Đang theo dõi '+n+' sinh viên. '+(weak?('Có '+weak+' kỹ năng ở mức “Đang luyện tập” cần ưu tiên.'):'Chưa có kỹ năng nào ở mức “Đang luyện tập”.')):'Hãy thêm sinh viên để NAVI bắt đầu tổng hợp tiến độ.';el.textContent=msg}
+function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0,ach=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++;if(r&&r.level>=2)ach++}))}catch(e){};let msg;if(!n)msg='Thầy/cô hãy thêm sinh viên để NAVI bắt đầu tổng hợp tình hình lớp.';else if(v8SlideIndex===1)msg=weak?'Có '+weak+' kỹ năng đang ở mức “Đang luyện tập”. Nên ưu tiên kiểm tra trong buổi thực hành tiếp theo.':'Hiện chưa có kỹ năng nào được đánh dấu “Đang luyện tập”.';else if(v8SlideIndex===2)msg='Đang theo dõi '+n+' sinh viên và ghi nhận '+ach+' lượt kỹ năng đã đạt để phục vụ báo cáo, Skill Passport.';else msg='Đang theo dõi '+n+' sinh viên. '+(weak?'Có '+weak+' kỹ năng cần giáo viên ưu tiên theo dõi.':'Tiến độ hiện chưa có cảnh báo kỹ năng mức “Đang luyện tập”.');el.textContent=msg}
 document.addEventListener('DOMContentLoaded',()=>{v8RestartSlider();setTimeout(v8NaviInsight,250);const h=document.getElementById('v8Hero');if(h){h.addEventListener('mouseenter',()=>clearInterval(v8SlideTimer));h.addEventListener('mouseleave',v8RestartSlider)}setTimeout(v88AnimateDashboardCounters,250);setInterval(()=>{const dash=document.getElementById('dashboard');if(!dash||dash.classList.contains('active')||getComputedStyle(dash).display!=='none')v88AnimateDashboardCounters()},5000)});
 const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboard==='function'){window.renderDashboard=function(){const r=_v8OldRenderDashboard.apply(this,arguments);setTimeout(v8NaviInsight,20);setTimeout(v88AnimateDashboardCounters,30);return r};setTimeout(v88AnimateDashboardCounters,120)}
 </script>
