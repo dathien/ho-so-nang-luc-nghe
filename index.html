@@ -1035,6 +1035,98 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
  #dashboard .navi-info.navi-speech-bubble:before{top:50%;left:-10px;transform:translateY(-50%) rotate(-45deg)}
 }
 </style>
+
+<style id="v9-6-navi-character-fix">
+/* V9.6 — NAVI: speech bubble above mascot, full body, mouse-follow eyes */
+#dashboard .navi-below-kpi{padding:16px 14px 18px!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px!important;overflow:hidden!important}
+#dashboard .navi-info.navi-speech-bubble{order:1!important;margin:0 2px 4px!important;padding:14px 14px 13px!important;border-radius:18px!important;background:#fff!important;border:1px solid #D7E4DF!important;box-shadow:0 10px 24px rgba(23,79,83,.09)!important;position:relative!important;z-index:5!important}
+#dashboard .navi-info.navi-speech-bubble:before{content:""!important;position:absolute!important;left:50%!important;top:auto!important;bottom:-10px!important;width:18px!important;height:18px!important;background:#fff!important;border:0!important;border-right:1px solid #D7E4DF!important;border-bottom:1px solid #D7E4DF!important;transform:translateX(-50%) rotate(45deg)!important;border-radius:0 0 3px 0!important}
+#dashboard .navi-info .navi-kicker{display:block!important;font-size:10px!important;letter-spacing:.55px!important;color:#9A733E!important;font-weight:900!important;margin-bottom:4px!important}
+#dashboard .navi-info h3{font-size:16px!important;line-height:1.2!important;margin:0 0 5px!important;color:#153F43!important}
+#dashboard .navi-info p{font-size:12px!important;line-height:1.45!important;margin:0 0 10px!important;color:#607270!important;display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:3!important;overflow:hidden!important}
+#dashboard .navi-info .navi-action{min-height:34px!important;padding:7px 12px!important;width:100%!important}
+#dashboard .navi-below-kpi .navi-stage{order:2!important;height:222px!important;margin:0!important;display:grid!important;place-items:start center!important;overflow:visible!important;position:relative!important;z-index:2!important}
+#dashboard .navi-below-kpi .navi-wrap{--eye-x:0px;--eye-y:0px;transform:scale(.82)!important;transform-origin:top center!important;width:180px!important;height:250px!important;margin:2px auto 0!important;animation:naviIdleV96 3.4s ease-in-out infinite!important;filter:drop-shadow(0 11px 9px rgba(23,79,83,.12))!important}
+@keyframes naviIdleV96{0%,100%{translate:0 0}50%{translate:0 -4px}}
+/* cleaner face */
+#dashboard .navi-below-kpi .navi-head{left:49px!important;top:12px!important;width:84px!important;height:84px!important;border-radius:45% 45% 49% 49%!important;background:linear-gradient(180deg,#FFDDC8,#F4C4A8)!important;border:3px solid rgba(255,255,255,.86)!important}
+#dashboard .navi-below-kpi .navi-hair{left:46px!important;top:5px!important;width:91px!important;height:43px!important;border-radius:48px 48px 22px 22px!important;background:#173F43!important;z-index:7!important}
+#dashboard .navi-below-kpi .navi-hair:after{right:8px!important;bottom:-10px!important;width:17px!important;height:24px!important;background:#173F43!important}
+/* eyes: white sclera + pupil that follows pointer */
+#dashboard .navi-below-kpi .navi-eye{top:44px!important;width:15px!important;height:11px!important;background:#fff!important;border:1px solid rgba(20,61,64,.16)!important;box-shadow:none!important;overflow:hidden!important;z-index:8!important;animation:naviBlinkV96 5s infinite!important;transform-origin:center!important}
+#dashboard .navi-below-kpi .navi-eye.e1{left:67px!important}
+#dashboard .navi-below-kpi .navi-eye.e2{left:101px!important}
+#dashboard .navi-below-kpi .navi-eye:after{content:"";position:absolute;left:4px;top:2px;width:6px;height:6px;border-radius:50%;background:#174F52;transform:translate(var(--eye-x),var(--eye-y));transition:transform .08s linear;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+@keyframes naviBlinkV96{0%,46%,50%,100%{scale:1 1}48%{scale:1 .12}}
+#dashboard .navi-below-kpi .navi-smile{left:82px!important;top:66px!important;width:22px!important;height:9px!important;border-bottom:2px solid #B8675A!important}
+/* body and arms */
+#dashboard .navi-below-kpi .navi-body{left:34px!important;top:94px!important;width:114px!important;height:100px!important;border-radius:29px 29px 22px 22px!important;background:linear-gradient(180deg,#1B5B5E 0 31%,#F8F8F3 31% 100%)!important;border:3px solid rgba(255,255,255,.84)!important;box-shadow:0 5px 0 rgba(23,79,83,.07)!important;z-index:4!important}
+#dashboard .navi-below-kpi .navi-body:before{display:none!important}
+#dashboard .navi-below-kpi .navi-tie{left:85px!important;top:103px!important;height:31px!important;z-index:8!important}
+#dashboard .navi-below-kpi .navi-badge{left:111px!important;top:126px!important;z-index:8!important}
+#dashboard .navi-below-kpi .navi-arm{top:105px!important;height:72px!important;z-index:3!important}
+/* full legs + shoes */
+#dashboard .navi-below-kpi .navi-leg{position:absolute;top:190px;width:24px;height:42px;background:linear-gradient(180deg,#315D61 0 63%,#F2C5A9 63% 82%,#24383B 82% 100%);border-radius:0 0 12px 12px;z-index:2;border:2px solid rgba(255,255,255,.55);border-top:0}
+#dashboard .navi-below-kpi .navi-leg.l1{left:59px!important}
+#dashboard .navi-below-kpi .navi-leg.l2{left:99px!important}
+#dashboard .navi-below-kpi .navi-leg:after{content:"";position:absolute;bottom:-4px;left:-4px;width:31px;height:11px;border-radius:12px 12px 8px 8px;background:#24383B}
+@media(max-width:900px){#dashboard .navi-below-kpi .navi-stage{height:214px!important}#dashboard .navi-below-kpi .navi-wrap{transform:scale(.78)!important}}
+@media(max-width:620px){#dashboard .navi-below-kpi{max-width:360px!important;margin-inline:auto!important}#dashboard .navi-info.navi-speech-bubble{margin-bottom:6px!important}#dashboard .navi-below-kpi .navi-stage{height:205px!important}}
+@media(prefers-reduced-motion:reduce){#dashboard .navi-below-kpi .navi-wrap,#dashboard .navi-below-kpi .navi-eye{animation:none!important}}
+</style>
+
+<style id="v9-7-navi-3d-css">
+/* V9.7 - NAVI 3D/2.5D CSS mascot. No image assets. */
+#dashboard .navi-below-kpi{overflow:visible!important}
+#dashboard .navi-below-kpi .navi-stage{height:292px!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;overflow:visible!important;padding-top:8px!important;perspective:700px}
+#dashboard .navi-below-kpi .navi-wrap.navi-3d{--eye-x:0px;--eye-y:0px;position:relative!important;width:190px!important;height:270px!important;margin:0 auto!important;transform-style:preserve-3d;filter:none!important;animation:navi3dIdle 3.8s ease-in-out infinite!important}
+@keyframes navi3dIdle{0%,100%{transform:translateY(0) rotateX(0deg)}50%{transform:translateY(-5px) rotateX(1.2deg)}}
+#dashboard .navi-3d .navi-shadow{position:absolute;left:42px;bottom:0;width:108px;height:18px;border-radius:50%;background:radial-gradient(ellipse,rgba(24,60,61,.25),rgba(24,60,61,0) 70%);filter:blur(2px);transform:translateZ(-20px)}
+#dashboard .navi-3d .navi-backhair{position:absolute;left:48px;top:15px;width:100px;height:108px;border-radius:48% 48% 44% 44%;background:linear-gradient(110deg,#18373a 0%,#294f51 42%,#102c2f 100%);box-shadow:inset 10px 5px 14px rgba(255,255,255,.08),inset -12px -8px 18px rgba(0,0,0,.24),0 10px 18px rgba(17,55,58,.16);z-index:1}
+#dashboard .navi-3d .navi-head{position:absolute!important;left:57px!important;top:24px!important;width:82px!important;height:91px!important;border:0!important;border-radius:46% 46% 48% 48%!important;background:radial-gradient(circle at 34% 24%,#ffe5d4 0 12%,#f6c8aa 43%,#e9ad8e 100%)!important;box-shadow:inset 7px 5px 10px rgba(255,255,255,.38),inset -8px -5px 12px rgba(176,92,65,.14),0 8px 14px rgba(63,42,32,.14)!important;z-index:4!important}
+#dashboard .navi-3d .navi-ear{position:absolute;top:57px;width:17px;height:25px;border-radius:50%;background:linear-gradient(120deg,#f6c8aa,#e8aa8c);box-shadow:inset 2px 0 4px rgba(255,255,255,.35);z-index:3}
+#dashboard .navi-3d .ear-l{left:49px}.navi-3d .ear-r{left:132px}
+#dashboard .navi-3d .navi-hair{position:absolute!important;left:52px!important;top:14px!important;width:94px!important;height:52px!important;border-radius:52px 52px 20px 22px!important;background:linear-gradient(135deg,#24494b 0%,#163537 62%,#0d292b 100%)!important;box-shadow:inset 8px 5px 9px rgba(255,255,255,.09),0 4px 7px rgba(0,0,0,.14)!important;z-index:7!important;transform:rotate(-2deg)!important}
+#dashboard .navi-3d .navi-hair:after{display:none!important}
+#dashboard .navi-3d .navi-fringe{position:absolute;background:linear-gradient(145deg,#274d4f,#123133);z-index:8;box-shadow:inset 3px 2px 3px rgba(255,255,255,.07)}
+#dashboard .navi-3d .navi-fringe.f1{left:61px;top:36px;width:39px;height:26px;border-radius:80% 15% 80% 15%;transform:rotate(-14deg)}
+#dashboard .navi-3d .navi-fringe.f2{left:96px;top:34px;width:39px;height:24px;border-radius:15% 80% 15% 80%;transform:rotate(12deg)}
+#dashboard .navi-3d .navi-brow{position:absolute;top:63px;width:17px;height:5px;border-top:2px solid #6e4d43;border-radius:50%;z-index:9;opacity:.8}.navi-3d .b1{left:70px;transform:rotate(-4deg)}.navi-3d .b2{left:110px;transform:rotate(4deg)}
+#dashboard .navi-3d .navi-eye{position:absolute!important;top:70px!important;width:19px!important;height:14px!important;border-radius:52%!important;background:linear-gradient(#fff,#f7fbfa)!important;border:1px solid rgba(68,74,70,.16)!important;box-shadow:inset 0 -2px 3px rgba(57,83,79,.08),0 1px 1px rgba(255,255,255,.8)!important;overflow:hidden!important;z-index:10!important;animation:navi3dBlink 5.4s infinite!important;transform-origin:center!important}
+#dashboard .navi-3d .navi-eye.e1{left:68px!important}#dashboard .navi-3d .navi-eye.e2{left:109px!important}
+#dashboard .navi-3d .navi-eye:before{content:"";position:absolute;left:5px;top:2px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#d7f4ee 0 12%,#438b86 15% 48%,#173f43 51% 75%,#0a2022 78%);transform:translate(var(--eye-x),var(--eye-y));transition:transform .07s linear;box-shadow:0 0 0 1px rgba(20,61,64,.12)}
+#dashboard .navi-3d .navi-eye:after{content:""!important;position:absolute!important;left:11px!important;top:3px!important;width:3px!important;height:3px!important;border-radius:50%!important;background:#fff!important;transform:translate(var(--eye-x),var(--eye-y))!important;transition:transform .07s linear!important;box-shadow:none!important}
+@keyframes navi3dBlink{0%,46%,49%,100%{transform:scaleY(1)}47.5%{transform:scaleY(.08)}}
+#dashboard .navi-3d .navi-nose{position:absolute;left:96px;top:87px;width:7px;height:6px;border-radius:50%;border-right:2px solid rgba(166,99,78,.36);border-bottom:1px solid rgba(166,99,78,.18);z-index:10}
+#dashboard .navi-3d .navi-blush{position:absolute;top:89px;width:15px;height:7px;border-radius:50%;background:radial-gradient(ellipse,rgba(225,120,114,.28),transparent 72%);z-index:9}.navi-3d .bl1{left:65px}.navi-3d .bl2{left:119px}
+#dashboard .navi-3d .navi-smile{position:absolute!important;left:89px!important;top:96px!important;width:20px!important;height:10px!important;border:0!important;border-bottom:3px solid #a95f59!important;border-radius:0 0 50% 50%!important;z-index:10!important;box-shadow:0 2px 0 rgba(255,255,255,.2)}
+#dashboard .navi-3d .navi-neck{position:absolute;left:86px;top:108px;width:25px;height:22px;border-radius:8px;background:linear-gradient(90deg,#e9ad8e,#f6c8aa 48%,#e3a486);z-index:2}
+#dashboard .navi-3d .navi-body{position:absolute!important;left:50px!important;top:121px!important;width:98px!important;height:89px!important;border:0!important;border-radius:27px 27px 17px 17px!important;background:linear-gradient(145deg,#fbfcf9 0%,#eaf2ee 58%,#dce8e3 100%)!important;box-shadow:inset 7px 4px 12px rgba(255,255,255,.8),inset -8px -8px 14px rgba(52,94,91,.12),0 10px 16px rgba(25,69,69,.15)!important;z-index:5!important}
+#dashboard .navi-3d .navi-body:before{content:""!important;display:block!important;position:absolute!important;left:0!important;right:0!important;top:0!important;height:30px!important;border-radius:26px 26px 12px 12px!important;background:linear-gradient(145deg,#2a7273,#174f52 68%,#103d40)!important;box-shadow:inset 4px 3px 5px rgba(255,255,255,.12)!important}
+#dashboard .navi-3d .navi-collar{position:absolute;top:126px;width:31px;height:24px;background:#fff;z-index:7;filter:drop-shadow(0 2px 2px rgba(0,0,0,.07))}.navi-3d .c1{left:72px;clip-path:polygon(0 0,100% 0,72% 100%);transform:rotate(6deg)}.navi-3d .c2{left:96px;clip-path:polygon(0 0,100% 0,28% 100%);transform:rotate(-6deg)}
+#dashboard .navi-3d .navi-scarf{position:absolute;left:91px;top:135px;width:17px;height:35px;background:linear-gradient(145deg,#d6b071,#b8894f);clip-path:polygon(50% 0,100% 18%,72% 100%,28% 100%,0 18%);z-index:8;filter:drop-shadow(0 2px 2px rgba(93,66,30,.18))}
+#dashboard .navi-3d .navi-badge{position:absolute!important;left:115px!important;top:157px!important;width:27px!important;height:16px!important;border-radius:5px!important;background:linear-gradient(#fff,#f4f4ed)!important;color:#174f52!important;font-size:6px!important;font-weight:900!important;display:grid!important;place-items:center!important;z-index:8!important;box-shadow:0 2px 4px rgba(24,79,82,.16)!important;border:1px solid rgba(23,79,82,.12)!important}
+#dashboard .navi-3d .navi-arm{position:absolute!important;top:129px!important;width:25px!important;height:72px!important;border:0!important;border-radius:17px!important;background:linear-gradient(145deg,#f8fbf7,#dfeae5)!important;box-shadow:inset 4px 2px 6px rgba(255,255,255,.8),inset -4px -4px 7px rgba(42,90,87,.12),0 5px 8px rgba(26,69,68,.10)!important;z-index:4!important}
+#dashboard .navi-3d .navi-arm.a1{left:35px!important;transform:rotate(11deg)!important}#dashboard .navi-3d .navi-arm.a2{right:27px!important;transform-origin:12px 9px!important;transform:rotate(-33deg)!important;animation:navi3dWave 3.1s ease-in-out infinite!important}
+@keyframes navi3dWave{0%,100%{transform:rotate(-33deg)}50%{transform:rotate(-48deg)}}
+#dashboard .navi-3d .navi-hand{position:absolute;left:2px;bottom:-9px;width:22px;height:23px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 35% 25%,#ffe0cc,#efb393 68%,#dfa080);box-shadow:inset 3px 2px 4px rgba(255,255,255,.35)}
+#dashboard .navi-3d .navi-tablet{position:absolute;left:40px;top:161px;width:39px;height:51px;border-radius:7px;background:linear-gradient(145deg,#315e61,#173f43);border:3px solid #d6b071;box-shadow:0 5px 8px rgba(0,0,0,.18),inset 0 0 0 2px rgba(255,255,255,.06);z-index:9;transform:rotate(-8deg)}
+#dashboard .navi-3d .navi-tablet span{position:absolute;left:6px;right:6px;top:8px;height:27px;border-radius:3px;background:linear-gradient(180deg,#dff1ed,#f9fbf8);box-shadow:inset 0 7px 0 #83aaa0}
+#dashboard .navi-3d .navi-skirt{position:absolute;left:57px;top:195px;width:84px;height:36px;background:linear-gradient(145deg,#255e61,#174f52 70%,#103b3e);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);z-index:4;box-shadow:inset 8px 0 8px rgba(255,255,255,.05)}
+#dashboard .navi-3d .navi-leg{position:absolute!important;top:222px!important;width:22px!important;height:37px!important;border:0!important;border-radius:8px 8px 10px 10px!important;background:linear-gradient(90deg,#e7aa8a,#f5c3a5 48%,#dc9a7c)!important;box-shadow:inset 3px 0 4px rgba(255,255,255,.25)!important;z-index:3!important}
+#dashboard .navi-3d .navi-leg.l1{left:70px!important}#dashboard .navi-3d .navi-leg.l2{left:108px!important}#dashboard .navi-3d .navi-leg:after{display:none!important}
+#dashboard .navi-3d .navi-shoe{position:absolute;top:251px;width:31px;height:15px;border-radius:50% 60% 38% 38%;background:linear-gradient(145deg,#34494a,#172e30);box-shadow:inset 3px 2px 4px rgba(255,255,255,.08),0 4px 5px rgba(0,0,0,.18);z-index:6}.navi-3d .navi-shoe.s1{left:61px;transform:rotate(-3deg)}.navi-3d .navi-shoe.s2{left:107px;transform:rotate(3deg)}
+/* Real speech bubble above mascot, with tail aimed at NAVI */
+#dashboard .navi-info.navi-speech-bubble{position:relative!important;margin:0 8px 12px!important;padding:15px 16px 14px!important;border-radius:20px!important;background:linear-gradient(145deg,#ffffff,#f7faf7)!important;border:1px solid #dce8e3!important;box-shadow:0 12px 28px rgba(29,72,70,.10)!important;overflow:visible!important}
+#dashboard .navi-info.navi-speech-bubble:after{content:""!important;position:absolute!important;left:50%!important;bottom:-13px!important;width:25px!important;height:25px!important;background:#f8faf7!important;border-right:1px solid #dce8e3!important;border-bottom:1px solid #dce8e3!important;transform:translateX(-50%) rotate(45deg)!important;border-radius:0 0 5px 0!important}
+#dashboard .navi-info.navi-speech-bubble .navi-kicker{display:inline-flex!important;padding:5px 9px!important;border-radius:999px!important;background:#e9f2ee!important;color:#1d6264!important;font-size:10px!important;letter-spacing:.07em!important}
+#dashboard .navi-info.navi-speech-bubble h3{margin:8px 0 4px!important;color:#173f43!important;font-size:18px!important}
+#dashboard .navi-info.navi-speech-bubble p{margin:0!important;color:#586b69!important;font-size:12.5px!important;line-height:1.55!important}
+#dashboard .navi-info.navi-speech-bubble .navi-action{margin-top:10px!important}
+@media(max-width:900px){#dashboard .navi-below-kpi .navi-stage{height:275px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.9)!important;transform-origin:center bottom!important}}
+@media(max-width:620px){#dashboard .navi-below-kpi .navi-stage{height:260px!important}#dashboard .navi-below-kpi .navi-wrap.navi-3d{transform:scale(.84)!important;transform-origin:center bottom!important}}
+@media(prefers-reduced-motion:reduce){#dashboard .navi-wrap.navi-3d,#dashboard .navi-3d .navi-eye,#dashboard .navi-3d .navi-arm.a2{animation:none!important}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -1081,8 +1173,8 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
       <div class="grid g4" id="metrics"><div class="card metric-card"><div class="small">Sinh viên</div><div class="metric">4</div></div><div class="card metric-card"><div class="small">Nhóm nghiệp vụ</div><div class="metric">7</div></div><div class="card metric-card"><div class="small">Lớp đào tạo</div><div class="metric">6</div></div><div class="card metric-card"><div class="small">Môn học</div><div class="metric">6</div></div></div>
       <div class="dashboard-insight-row">
         <aside class="teacher-navi-panel navi-below-kpi" aria-label="NAVI - Trợ lý quản lý đào tạo">
-          <div class="navi-stage"><div class="navi-wrap"><div class="navi-hair"></div><div class="navi-head"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-smile"></div><div class="navi-body"></div><div class="navi-tie"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"></div><div class="navi-arm a2"></div></div></div>
           <div class="navi-info navi-speech-bubble"><span class="navi-kicker">NAVI · TRỢ LÝ GIÁO VIÊN</span><h3>Điểm cần chú ý</h3><p id="naviInsight">Đang tổng hợp dữ liệu đào tạo…</p><button class="btn navi-action" onclick="v8Go('reports','Báo cáo')">Xem báo cáo</button></div>
+          <div class="navi-stage"><div class="navi-wrap navi-3d" id="naviMascot" aria-label="NAVI - trợ lý giáo viên 3D"><div class="navi-shadow"></div><div class="navi-backhair"></div><div class="navi-ear ear-l"></div><div class="navi-ear ear-r"></div><div class="navi-head"></div><div class="navi-hair"></div><div class="navi-fringe f1"></div><div class="navi-fringe f2"></div><div class="navi-brow b1"></div><div class="navi-brow b2"></div><div class="navi-eye e1"></div><div class="navi-eye e2"></div><div class="navi-nose"></div><div class="navi-blush bl1"></div><div class="navi-blush bl2"></div><div class="navi-smile"></div><div class="navi-neck"></div><div class="navi-body"></div><div class="navi-collar c1"></div><div class="navi-collar c2"></div><div class="navi-scarf"></div><div class="navi-badge">NAVI</div><div class="navi-arm a1"><span class="navi-hand"></span></div><div class="navi-arm a2"><span class="navi-hand"></span></div><div class="navi-tablet"><span></span></div><div class="navi-skirt"></div><div class="navi-leg l1"></div><div class="navi-leg l2"></div><div class="navi-shoe s1"></div><div class="navi-shoe s2"></div></div></div>
         </aside>
         <div class="card"><h3>Tiến độ theo nghiệp vụ</h3><div id="deptProgress"><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Kỹ năng chung</b><span>32%</span></div><div class="progress"><span style="width:32%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Buồng</b><span>24%</span></div><div class="progress"><span style="width:24%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bàn</b><span>18%</span></div><div class="progress"><span style="width:18%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bar</b><span>12%</span></div><div class="progress"><span style="width:12%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Bếp</b><span>10%</span></div><div class="progress"><span style="width:10%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Lễ tân</b><span>19%</span></div><div class="progress"><span style="width:19%"></span></div></div><div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><b>Du lịch</b><span>22%</span></div><div class="progress"><span style="width:22%"></span></div></div></div></div>
         <div class="card"><h3>Kỹ năng cần ưu tiên</h3><div id="prioritySkills"><div class="notice" style="margin:8px 0">Nguyễn Minh Anh: Cần luyện thêm thao tác nghiệp vụ buồng</div><div class="notice" style="margin:8px 0">Trần Quốc Bảo: Tiếp tục luyện kỹ năng phục vụ</div></div></div>
@@ -2902,6 +2994,31 @@ function v8Go(id,title){if(typeof showSection==='function')showSection(id,title)
 function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0,ach=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++;if(r&&r.level>=2)ach++}))}catch(e){};let msg;if(!n)msg='Thầy/cô hãy thêm sinh viên để NAVI bắt đầu tổng hợp tình hình lớp.';else if(v8SlideIndex===1)msg=weak?'Có '+weak+' kỹ năng đang ở mức “Đang luyện tập”. Nên ưu tiên kiểm tra trong buổi thực hành tiếp theo.':'Hiện chưa có kỹ năng nào được đánh dấu “Đang luyện tập”.';else if(v8SlideIndex===2)msg='Đang theo dõi '+n+' sinh viên và ghi nhận '+ach+' lượt kỹ năng đã đạt để phục vụ báo cáo, Skill Passport.';else msg='Đang theo dõi '+n+' sinh viên. '+(weak?'Có '+weak+' kỹ năng cần giáo viên ưu tiên theo dõi.':'Tiến độ hiện chưa có cảnh báo kỹ năng mức “Đang luyện tập”.');el.textContent=msg}
 document.addEventListener('DOMContentLoaded',()=>{v8RestartSlider();setTimeout(v8NaviInsight,250);const h=document.getElementById('v8Hero');if(h){h.addEventListener('mouseenter',()=>clearInterval(v8SlideTimer));h.addEventListener('mouseleave',v8RestartSlider)}setTimeout(v88AnimateDashboardCounters,250);});
 const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboard==='function'){window.renderDashboard=function(){const r=_v8OldRenderDashboard.apply(this,arguments);setTimeout(v8NaviInsight,20);setTimeout(v88AnimateDashboardCounters,30);return r};setTimeout(v88AnimateDashboardCounters,120)}
+</script>
+
+<script id="v9-6-navi-eye-tracking">
+(function(){
+  function initNaviEyes(){
+    const mascot=document.getElementById('naviMascot');
+    if(!mascot || mascot.dataset.eyeTracking==='1') return;
+    mascot.dataset.eyeTracking='1';
+    const maxX=2.7,maxY=2.0;
+    function move(e){
+      const r=mascot.getBoundingClientRect();
+      const cx=r.left+r.width/2, cy=r.top+r.height*.24;
+      const dx=e.clientX-cx, dy=e.clientY-cy;
+      const d=Math.hypot(dx,dy)||1;
+      const strength=Math.min(1,d/150);
+      mascot.style.setProperty('--eye-x',((dx/d)*maxX*strength).toFixed(2)+'px');
+      mascot.style.setProperty('--eye-y',((dy/d)*maxY*strength).toFixed(2)+'px');
+    }
+    function reset(){mascot.style.setProperty('--eye-x','0px');mascot.style.setProperty('--eye-y','0px')}
+    document.addEventListener('mousemove',move,{passive:true});
+    document.addEventListener('mouseleave',reset,{passive:true});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initNaviEyes);
+  else initNaviEyes();
+})();
 </script>
 </body>
 </html>
