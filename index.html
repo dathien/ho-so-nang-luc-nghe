@@ -850,6 +850,24 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
+\n<style id="v8-7-motion-system">\n/* V8.7 Motion System — purposeful micro-interactions, no distracting motion */\n:root{--motion-fast:180ms;--motion-base:320ms;--motion-slow:560ms;--motion-ease:cubic-bezier(.2,.8,.2,1)}\n.section.active{animation:v87PageIn .42s var(--motion-ease) both}\n.section.active>.card,.section.active>.grid>.card{animation:v87CardIn .48s var(--motion-ease) both}\n.section.active>.card:nth-child(2),.section.active>.grid>.card:nth-child(2){animation-delay:.05s}\n.section.active>.card:nth-child(3),.section.active>.grid>.card:nth-child(3){animation-delay:.1s}\n@keyframes v87PageIn{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}\n@keyframes v87CardIn{from{opacity:0;transform:translateY(12px) scale(.992)}to{opacity:1;transform:none}}\n.sidebar .nav button{transition:background var(--motion-fast) ease,color var(--motion-fast) ease,transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}\n.sidebar .nav button:hover{transform:translateX(3px)}\n.sidebar .nav button.active{animation:v87NavActive .32s var(--motion-ease)}\n@keyframes v87NavActive{0%{transform:translateX(-3px);opacity:.75}100%{transform:none;opacity:1}}\n.card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease,border-color var(--motion-base) ease!important}\n.section:not(#dashboard) .card:hover{box-shadow:var(--ui-shadow-hover)!important;border-color:#D1DCD6!important}\n.metric-card{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}\n.metric-card:hover{transform:translateY(-4px)!important;box-shadow:var(--ui-shadow-hover)!important}\n.metric-card .metric{animation:v87Metric .55s var(--motion-ease) both}\n@keyframes v87Metric{from{opacity:0;transform:translateY(7px) scale(.96)}to{opacity:1;transform:none}}\n.btn,.hero-btn,.brand-edit-btn{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease,filter var(--motion-fast) ease,background var(--motion-fast) ease!important}\n.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:translateY(-2px)!important}\n.btn:active,.hero-btn:active,.brand-edit-btn:active{transform:translateY(0) scale(.98)!important}\ninput,select,textarea{transition:border-color var(--motion-fast) ease,box-shadow var(--motion-fast) ease,background var(--motion-fast) ease!important}\ntbody tr td{transition:background var(--motion-fast) ease!important}\ntbody tr:hover td{background:#F7FAF8!important}\n.badge,.career-chip{transition:transform var(--motion-fast) ease,box-shadow var(--motion-fast) ease!important}.badge:hover,.career-chip:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(20,61,64,.08)}\n.progress span{position:relative;overflow:hidden;transition:width .75s var(--motion-ease)!important}\n.progress span:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:v87ProgressGlow 3.2s ease-in-out infinite}\n@keyframes v87ProgressGlow{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}\n.notice{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.notice:hover{transform:translateX(3px);box-shadow:0 7px 16px rgba(20,61,64,.06)}\n.v8-hero{overflow:hidden}.v8-copy>*{animation:v87HeroText .62s var(--motion-ease) both}.v8-copy>*:nth-child(2){animation-delay:.08s}.v8-copy>*:nth-child(3){animation-delay:.14s}.v8-copy>*:nth-child(4){animation-delay:.2s}\n@keyframes v87HeroText{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}\n.v8-dot{transition:width .25s ease,transform .25s ease,background .25s ease!important}.v8-dot.active{transform:scale(1.18)}\n.v8-arrow{transition:transform var(--motion-fast) ease,background var(--motion-fast) ease!important}.v8-arrow:hover{transform:scale(1.08)}\n.navi-assist{transition:transform var(--motion-base) var(--motion-ease),box-shadow var(--motion-base) ease!important}.navi-assist:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(20,61,64,.08)!important}\n@media(max-width:760px){.sidebar .nav button:hover{transform:none}.section:not(#dashboard) .card:hover,.metric-card:hover,.notice:hover,.navi-assist:hover{transform:none!important}}\n@media(prefers-reduced-motion:reduce){.section.active,.section.active>.card,.section.active>.grid>.card,.sidebar .nav button.active,.metric-card .metric,.v8-copy>*,.progress span:after{animation:none!important}.sidebar .nav button:hover,.metric-card:hover,.notice:hover,.navi-assist:hover,.btn:hover,.hero-btn:hover,.brand-edit-btn:hover{transform:none!important}}\n</style>\n
+<style id="v8-8-slide-counter-fix">
+/* V8.8: repair hero composition + animated dashboard counters */
+#dashboard .v8-slide{grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr)!important;column-gap:28px!important}
+#dashboard .v8-copy{min-width:0!important;max-width:590px!important;padding-left:8px!important}
+#dashboard .v8-copy h2{max-width:570px!important;font-size:clamp(29px,2.55vw,34px)!important;line-height:1.08!important;letter-spacing:-.8px!important;text-wrap:balance}
+#dashboard .v8-copy p{max-width:560px!important}
+#dashboard .v8-scene{min-width:0!important;width:100%!important;max-width:330px!important;justify-self:end!important}
+#dashboard .v8-arrow{top:auto!important;bottom:16px!important;left:auto!important;width:34px!important;height:34px!important}
+#dashboard .v8-arrow.prev{right:58px!important;left:auto!important}
+#dashboard .v8-arrow:not(.prev){right:18px!important}
+#dashboard .v8-dots{left:54px!important;bottom:18px!important}
+#dashboard .metric-card .metric{font-variant-numeric:tabular-nums;min-height:35px}
+#dashboard .metric-card.counter-running .metric{animation:none!important}
+@media(max-width:1100px){#dashboard .v8-slide{grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr)!important;column-gap:18px!important}#dashboard .v8-copy{max-width:540px!important}#dashboard .v8-copy h2{font-size:30px!important;max-width:520px!important}#dashboard .v8-scene{max-width:280px!important}}
+@media(max-width:900px){#dashboard .v8-slide{grid-template-columns:1fr!important}#dashboard .v8-copy{max-width:650px!important;padding-left:0!important}#dashboard .v8-copy h2{max-width:610px!important}#dashboard .v8-scene{max-width:230px!important}#dashboard .v8-arrow{display:none!important}#dashboard .v8-dots{left:28px!important}}
+@media(max-width:620px){#dashboard .v8-copy h2{font-size:27px!important}#dashboard .v8-dots{left:20px!important}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -2681,13 +2699,40 @@ try{renderAll()}catch(error){console.error("Lỗi hiển thị; dữ liệu mẫ
 
 <script id="v8-interactions">
 let v8SlideIndex=0,v8SlideTimer=null;
+function v88AnimateDashboardCounters(){
+  const root=document.getElementById('metrics');
+  if(!root)return;
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.querySelectorAll('.metric-card .metric').forEach((el,idx)=>{
+    const raw=(el.textContent||'').trim();
+    const match=raw.match(/^([0-9]+(?:\.[0-9]+)?)(%?)$/);
+    if(!match)return;
+    const target=Number(match[1]), suffix=match[2]||'';
+    if(!Number.isFinite(target))return;
+    if(reduce){el.textContent=target+suffix;return;}
+    const card=el.closest('.metric-card'); if(card)card.classList.add('counter-running');
+    const duration=Math.min(1150,650+Math.min(target,400)*1.25);
+    const start=performance.now()+idx*70;
+    const decimals=(match[1].split('.')[1]||'').length;
+    el.textContent='0'+suffix;
+    function frame(now){
+      const p=Math.max(0,Math.min(1,(now-start)/duration));
+      const eased=1-Math.pow(1-p,3);
+      const value=target*eased;
+      el.textContent=(decimals?value.toFixed(decimals):Math.round(value))+suffix;
+      if(p<1)requestAnimationFrame(frame);else{el.textContent=target.toFixed(decimals)+suffix;if(card)card.classList.remove('counter-running');}
+    }
+    requestAnimationFrame(frame);
+  });
+}
+
 function v8SetSlide(i){const slides=[...document.querySelectorAll('.v8-slide')],dots=[...document.querySelectorAll('.v8-dot')];if(!slides.length)return;v8SlideIndex=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===v8SlideIndex));dots.forEach((d,n)=>d.classList.toggle('active',n===v8SlideIndex));v8RestartSlider()}
 function v8Slide(step){v8SetSlide(v8SlideIndex+step)}
 function v8RestartSlider(){clearInterval(v8SlideTimer);v8SlideTimer=setInterval(()=>v8SetSlide(v8SlideIndex+1),6500)}
 function v8Go(id,title){if(typeof showSection==='function')showSection(id,title)}
 function v8NaviInsight(){const el=document.getElementById('naviInsight');if(!el||typeof data==='undefined')return;const n=data.students?.length||0;let weak=0;try{data.students.forEach(st=>applicableSkills(st.id).forEach(sk=>{const r=data.ratings[st.id+'|'+sk.code];if(r&&r.level===1)weak++}))}catch(e){};let msg=n?('Đang theo dõi '+n+' sinh viên. '+(weak?('Có '+weak+' kỹ năng ở mức “Đang luyện tập” cần ưu tiên.'):'Chưa có kỹ năng nào ở mức “Đang luyện tập”.')):'Hãy thêm sinh viên để NAVI bắt đầu tổng hợp tiến độ.';el.textContent=msg}
 document.addEventListener('DOMContentLoaded',()=>{v8RestartSlider();setTimeout(v8NaviInsight,250);const h=document.getElementById('v8Hero');if(h){h.addEventListener('mouseenter',()=>clearInterval(v8SlideTimer));h.addEventListener('mouseleave',v8RestartSlider)}});
-const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboard==='function'){window.renderDashboard=function(){const r=_v8OldRenderDashboard.apply(this,arguments);setTimeout(v8NaviInsight,20);return r}}
+const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboard==='function'){window.renderDashboard=function(){const r=_v8OldRenderDashboard.apply(this,arguments);setTimeout(v8NaviInsight,20);setTimeout(v88AnimateDashboardCounters,30);return r};setTimeout(v88AnimateDashboardCounters,120)}
 </script>
 </body>
 </html>
