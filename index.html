@@ -3054,7 +3054,7 @@ const _v8OldRenderDashboard=window.renderDashboard;if(typeof _v8OldRenderDashboa
     const mascot=document.getElementById('naviMascot');
     if(!mascot || mascot.dataset.eyeTracking==='1') return;
     mascot.dataset.eyeTracking='1';
-    const maxX=2.7,maxY=2.0;
+    const maxX=2.7,maxY=2.0; 
     function move(e){
       const r=mascot.getBoundingClientRect();
       const cx=r.left+r.width/2, cy=r.top+r.height*.24;
