@@ -1493,6 +1493,12 @@ input,select,textarea{background:#FFF!important;color:var(--ui-ink)!important;bo
   .sidebar .brand #appName{font-size:14px!important}
 }
 </style>
+
+<style id="v11-brand-spacing-fix">
+/* V11.0 — Brand is a single text node; no span concatenation */
+.sidebar .brand #appName{word-spacing:.08em!important;white-space:nowrap!important}
+.sidebar .brand #appName span{display:contents!important}
+</style>
 </head>
 <body>
 <div class="app">
@@ -2070,10 +2076,8 @@ function setBrandAppName(name){
   if(!el)return;
   const value=(name||'').trim();
   if(value.toLocaleUpperCase('vi-VN')==='HỒ SƠ NĂNG LỰC NGHỀ'){
-    el.replaceChildren();
-    const l1=document.createElement('span'); l1.textContent='HỒ SƠ NĂNG LỰC';
-    const l2=document.createElement('span'); l2.textContent='NGHỀ';
-    el.append(l1,l2);
+    // One text node preserves the intended spaces between all words.
+    el.textContent='HỒ SƠ NĂNG LỰC NGHỀ';
   }else{
     el.textContent=value;
   }
